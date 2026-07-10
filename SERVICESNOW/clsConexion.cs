@@ -31,6 +31,22 @@ namespace SERVICESNOW
             }
 
         }
+        //Netodo Cerrar Conexion
+        public void CerrarConexion(MySqlConnection conexion)
+        {
+            try
+            {
+                if (conexion != null && conexion.State != ConnectionState.Closed)
+                {
+                    conexion.Close();
+                    conexion.Dispose();
+                }
+            }
 
+            catch (Exception ex)
+            {
+                throw new Exception("Error al cerrar la conexion con la base de datos" + (ex.Message, ex));
+            }
+        }
     }
 }
