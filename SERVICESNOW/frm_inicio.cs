@@ -66,7 +66,26 @@ namespace SERVICESNOW
 
         private void btn_ingresar_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                clsLogin login = new clsLogin();
+                login.Matricula = txt_matricula.Text;
+                login.Password = txt_contraseña.Text;
+
+                bool resp = login.ValidarAcceso();
+                if (resp == true)
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();//Cierra el login y abre el formulario principal
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error de autenticacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_matricula.Text = "";
+                txt_contraseña.Text = "";
+            }
+
         }
     }
 }
