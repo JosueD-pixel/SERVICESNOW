@@ -66,8 +66,7 @@ namespace SERVICESNOW
 
         private void btn_ingresar_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            
         }
     }
 }
