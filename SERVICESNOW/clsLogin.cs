@@ -13,7 +13,18 @@ namespace SERVICESNOW
         public string Matricula { get => matricula; set => matricula = value; }
         public string Password { get => password; set => password = value; }
 
-        public static int rol;
+        private static int rol;
+        public string nombreRol;
+        //atributo estatico
+        private static bool esAdministrador;
+        private static bool esRecepcionista;
+        private static bool esTrabajador;
+
+        //propiedad estatica
+        public static bool EsAdministrador { get => esAdministrador; }
+        public static bool EsRecepcionista { get => esRecepcionista; }
+        public static bool EsTrabajador { get => EsTrabajador;  }
+        public static int Rol { get => rol; set => rol = value; }
 
         public bool ValidarAcceso()
         {
@@ -22,11 +33,11 @@ namespace SERVICESNOW
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT idRol FROM usuarios " +
-                                 "WHERE matricula = @matricula AND contrasena = @contrasena;";
+                    string sql = "SELECT idRol FROM trabajadores " +
+                                 "WHERE claveTrabajador = @claveTrabajador AND contrasena = @contrasena;";
                     using (var consulta = new MySqlCommand(sql, conexion))
                     {
-                        consulta.Parameters.AddWithValue("@matricula", matricula);
+                        consulta.Parameters.AddWithValue("@claveTrabajador", matricula);
                         consulta.Parameters.AddWithValue("@contrasena", password);
 
                         using (var resultado = consulta.ExecuteReader())
@@ -35,13 +46,17 @@ namespace SERVICESNOW
                             {
                                  rol = resultado.GetInt32("idRol");
 
-                                string nombreRol = rol switch
+                                nombreRol = rol switch
                                 {
                                     1 => "Administrador",
                                     2 => "Recepcionista",
                                     _ => "Desconocido"
                                 };
-
+                                AsignarPermisos();
+                                if (!esAdministrador && !esRecepcionista)
+                                {
+                                    throw new Exception($"El perfil {nombreRol} no tiene permisos para acceder");
+                                }
                                 MessageBox.Show("Tu perfil es: " + nombreRol, "Sistema");
                                 return true;
                             }
@@ -59,5 +74,31 @@ namespace SERVICESNOW
                 throw new Exception(ex.Message, ex);
             }
         }//fin del metodo
+
+        public void AsignarPermisos()
+        {
+            switch (nombreRol)
+            {
+                case "Administrador":
+                    esAdministrador = true;
+                    esRecepcionista = false;
+                    esTrabajador = false; 
+                    break;
+                case "Recepcionista":
+                    esAdministrador = false;
+                    esRecepcionista = true;
+                    esTrabajador = false;
+                    break;
+                case "Trabajador ":
+                    esAdministrador = false;
+                    esRecepcionista = false;
+                    esTrabajador = true;
+                    break;
+                default:
+                    esAdministrador = false;
+                    esRecepcionista = false;
+                    break;
+            }
+        }
     }
 }

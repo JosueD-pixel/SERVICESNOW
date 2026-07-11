@@ -59,11 +59,6 @@ namespace SERVICESNOW
             btn_ingresar.Image = Properties.Resources.btn_ingresar;
         }
 
-        private void frm_inicio_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_ingresar_Click(object sender, EventArgs e)
         {
             try
@@ -73,17 +68,35 @@ namespace SERVICESNOW
                 login.Password = txt_contraseña.Text;
 
                 bool resp = login.ValidarAcceso();
-                if (resp == true)
+
+                if (resp)
                 {
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();//Cierra el login y abre el formulario principal
+                    this.Hide(); // Ocultamos el login
+
+                    if (clsLogin.EsAdministrador)
+                    {
+                        frm_administrador administrador = new frm_administrador();
+                        administrador.ShowDialog();
+                    }
+                    else if (clsLogin.EsRecepcionista)
+                    {
+                        frm_recepcionista recepcionista = new frm_recepcionista();
+                        recepcionista.ShowDialog();
+                    }
+
+                    this.Close(); // Cuando cierren el formulario, también se cierra el login
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error de autenticacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txt_matricula.Text = "";
-                txt_contraseña.Text = "";
+                MessageBox.Show(ex.Message,
+                                "Error de autenticación",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+
+                txt_matricula.Clear();
+                txt_contraseña.Clear();
+                txt_matricula.Focus();
             }
 
         }

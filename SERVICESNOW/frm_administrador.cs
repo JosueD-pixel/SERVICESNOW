@@ -8,11 +8,11 @@ using System.Windows.Forms;
 
 namespace SERVICESNOW
 {
-    public partial class Menu_principal : Form
+    public partial class frm_administrador : Form
     {
         private bool cerrarSesion = false;
         private bool menuAbierto = true;
-        public Menu_principal()
+        public frm_administrador()
         {
             InitializeComponent();
             OcultarSubMenus();

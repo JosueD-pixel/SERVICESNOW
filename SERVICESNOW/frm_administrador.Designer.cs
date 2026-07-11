@@ -1,6 +1,6 @@
 ﻿namespace SERVICESNOW
 {
-    partial class Menu_principal
+    partial class frm_administrador
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_principal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_administrador));
             pnl_superior = new Panel();
             pnl_logo = new Panel();
             label1 = new Label();

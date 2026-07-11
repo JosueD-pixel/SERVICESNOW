@@ -118,6 +118,7 @@
             txt_contraseña.Name = "txt_contraseña";
             txt_contraseña.Size = new Size(195, 27);
             txt_contraseña.TabIndex = 4;
+            txt_contraseña.UseSystemPasswordChar = true;
             // 
             // btn_ingresar
             // 
@@ -159,7 +160,6 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frm_inicio";
             Text = "Form1";
-            Load += frm_inicio_Load;
             pnl_control.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)btn_ocultar).EndInit();
             ((System.ComponentModel.ISupportInitialize)btn_salir).EndInit();
