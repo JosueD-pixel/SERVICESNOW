@@ -293,6 +293,26 @@ namespace SERVICESNOW.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap img_cancelacion {
+            get {
+                object obj = ResourceManager.GetObject("img_cancelacion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img_consultas {
+            get {
+                object obj = ResourceManager.GetObject("img_consultas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap img_elisesion {
             get {
                 object obj = ResourceManager.GetObject("img_elisesion", resourceCulture);
@@ -376,6 +396,16 @@ namespace SERVICESNOW.Properties {
         internal static System.Drawing.Bitmap img_loginchil {
             get {
                 object obj = ResourceManager.GetObject("img_loginchil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img_reservas1 {
+            get {
+                object obj = ResourceManager.GetObject("img_reservas1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

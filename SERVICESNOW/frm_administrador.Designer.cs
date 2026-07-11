@@ -193,7 +193,7 @@
             pnl_horarios.Controls.Add(pbcHorarios_agregar);
             pnl_horarios.Controls.Add(pbcHorarios_eliminar);
             pnl_horarios.Dock = DockStyle.Top;
-            pnl_horarios.Location = new Point(0, 748);
+            pnl_horarios.Location = new Point(0, 736);
             pnl_horarios.Name = "pnl_horarios";
             pnl_horarios.Size = new Size(250, 137);
             pnl_horarios.TabIndex = 10;
@@ -234,7 +234,7 @@
             pbc_horarios.Image = Properties.Resources.img_horarios;
             pbc_horarios.Location = new Point(0, 686);
             pbc_horarios.Name = "pbc_horarios";
-            pbc_horarios.Size = new Size(250, 62);
+            pbc_horarios.Size = new Size(250, 50);
             pbc_horarios.SizeMode = PictureBoxSizeMode.StretchImage;
             pbc_horarios.TabIndex = 9;
             pbc_horarios.TabStop = false;
@@ -438,7 +438,7 @@
             pnl_fromularios.Size = new Size(1652, 835);
             pnl_fromularios.TabIndex = 4;
             // 
-            // Menu_principal
+            // frm_administrador
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -449,7 +449,7 @@
             Controls.Add(pnl_menu);
             Controls.Add(pnl_superior);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Menu_principal";
+            Name = "frm_administrador";
             StartPosition = FormStartPosition.CenterScreen;
             Text = " ";
             WindowState = FormWindowState.Maximized;
