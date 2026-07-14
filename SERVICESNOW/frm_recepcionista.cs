@@ -52,7 +52,6 @@ namespace SERVICESNOW
         private void OcultarSubMenus()
         {
             pnl_reservas.Visible = false;
-            pnl_cancelaciones.Visible = false;
             pnl_trabajadores.Visible = false;
             pnl_consultas.Visible = false;
         }
@@ -88,10 +87,6 @@ namespace SERVICESNOW
             MostrarSubMenu(pnl_reservas);
         }
 
-        private void pbc_cancelaciones_Click(object sender, EventArgs e)
-        {
-            MostrarSubMenu(pnl_cancelaciones);
-        }
 
         private void pbc_trabajadores_Click(object sender, EventArgs e)
         {
@@ -125,6 +120,11 @@ namespace SERVICESNOW
         private void frm_recepcionista_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pbc_cerrarsesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

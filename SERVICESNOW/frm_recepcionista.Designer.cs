@@ -45,11 +45,6 @@
             pbcTrabajadores_eliminar = new PictureBox();
             pbcTrabajadores_agregar = new PictureBox();
             pbc_trabajadores = new PictureBox();
-            pnl_cancelaciones = new Panel();
-            pbcEquipos_modificar = new PictureBox();
-            pbcEquipos_eliminar = new PictureBox();
-            pbc_Equiposagregar = new PictureBox();
-            pbc_cancelaciones = new PictureBox();
             pnl_reservas = new Panel();
             pbcSalones_modificar = new PictureBox();
             pbc_Saloneseliminar = new PictureBox();
@@ -74,11 +69,6 @@
             ((System.ComponentModel.ISupportInitialize)pbcTrabajadores_eliminar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbcTrabajadores_agregar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbc_trabajadores).BeginInit();
-            pnl_cancelaciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbcEquipos_modificar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbcEquipos_eliminar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbc_Equiposagregar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbc_cancelaciones).BeginInit();
             pnl_reservas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbcSalones_modificar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbc_Saloneseliminar).BeginInit();
@@ -134,9 +124,9 @@
             lbl_usuario.ForeColor = Color.FromArgb(246, 240, 230);
             lbl_usuario.Location = new Point(1660, 9);
             lbl_usuario.Name = "lbl_usuario";
-            lbl_usuario.Size = new Size(201, 38);
+            lbl_usuario.Size = new Size(190, 38);
             lbl_usuario.TabIndex = 7;
-            lbl_usuario.Text = "Administrador";
+            lbl_usuario.Text = "Recepcionista";
             // 
             // pbc_user
             // 
@@ -166,8 +156,6 @@
             pnl_menu.Controls.Add(pbc_consultas);
             pnl_menu.Controls.Add(pnl_trabajadores);
             pnl_menu.Controls.Add(pbc_trabajadores);
-            pnl_menu.Controls.Add(pnl_cancelaciones);
-            pnl_menu.Controls.Add(pbc_cancelaciones);
             pnl_menu.Controls.Add(pnl_reservas);
             pnl_menu.Controls.Add(pbc_reservas);
             pnl_menu.Controls.Add(pnl_logo1);
@@ -183,14 +171,14 @@
             pnl_consultas.Controls.Add(pbcHorarios_agregar);
             pnl_consultas.Controls.Add(pbcHorarios_eliminar);
             pnl_consultas.Dock = DockStyle.Top;
-            pnl_consultas.Location = new Point(0, 736);
+            pnl_consultas.Location = new Point(0, 549);
             pnl_consultas.Name = "pnl_consultas";
             pnl_consultas.Size = new Size(250, 137);
             pnl_consultas.TabIndex = 11;
             // 
             // pbcHorarios_modificar
             // 
-            pbcHorarios_modificar.Image = Properties.Resources.boton_modificar;
+            pbcHorarios_modificar.Image = Properties.Resources.img_salas1;
             pbcHorarios_modificar.Location = new Point(98, 90);
             pbcHorarios_modificar.Name = "pbcHorarios_modificar";
             pbcHorarios_modificar.Size = new Size(149, 39);
@@ -200,7 +188,7 @@
             // 
             // pbcHorarios_agregar
             // 
-            pbcHorarios_agregar.Image = Properties.Resources.boton_agregar;
+            pbcHorarios_agregar.Image = Properties.Resources.img_horarios1;
             pbcHorarios_agregar.Location = new Point(98, 0);
             pbcHorarios_agregar.Name = "pbcHorarios_agregar";
             pbcHorarios_agregar.Size = new Size(149, 39);
@@ -210,7 +198,7 @@
             // 
             // pbcHorarios_eliminar
             // 
-            pbcHorarios_eliminar.Image = Properties.Resources.boton_eliminar;
+            pbcHorarios_eliminar.Image = Properties.Resources.img;
             pbcHorarios_eliminar.Location = new Point(98, 45);
             pbcHorarios_eliminar.Name = "pbcHorarios_eliminar";
             pbcHorarios_eliminar.Size = new Size(149, 39);
@@ -222,7 +210,7 @@
             // 
             pbc_consultas.Dock = DockStyle.Top;
             pbc_consultas.Image = Properties.Resources.img_consultas;
-            pbc_consultas.Location = new Point(0, 686);
+            pbc_consultas.Location = new Point(0, 499);
             pbc_consultas.Name = "pbc_consultas";
             pbc_consultas.Size = new Size(250, 50);
             pbc_consultas.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -236,7 +224,7 @@
             pnl_trabajadores.Controls.Add(pbcTrabajadores_eliminar);
             pnl_trabajadores.Controls.Add(pbcTrabajadores_agregar);
             pnl_trabajadores.Dock = DockStyle.Top;
-            pnl_trabajadores.Location = new Point(0, 549);
+            pnl_trabajadores.Location = new Point(0, 362);
             pnl_trabajadores.Name = "pnl_trabajadores";
             pnl_trabajadores.Size = new Size(250, 137);
             pnl_trabajadores.TabIndex = 9;
@@ -275,66 +263,13 @@
             // 
             pbc_trabajadores.Dock = DockStyle.Top;
             pbc_trabajadores.Image = Properties.Resources.img_trabajadores;
-            pbc_trabajadores.Location = new Point(0, 499);
+            pbc_trabajadores.Location = new Point(0, 312);
             pbc_trabajadores.Name = "pbc_trabajadores";
             pbc_trabajadores.Size = new Size(250, 50);
             pbc_trabajadores.SizeMode = PictureBoxSizeMode.StretchImage;
             pbc_trabajadores.TabIndex = 8;
             pbc_trabajadores.TabStop = false;
             pbc_trabajadores.Click += pbc_trabajadores_Click;
-            // 
-            // pnl_cancelaciones
-            // 
-            pnl_cancelaciones.Controls.Add(pbcEquipos_modificar);
-            pnl_cancelaciones.Controls.Add(pbcEquipos_eliminar);
-            pnl_cancelaciones.Controls.Add(pbc_Equiposagregar);
-            pnl_cancelaciones.Dock = DockStyle.Top;
-            pnl_cancelaciones.Location = new Point(0, 362);
-            pnl_cancelaciones.Name = "pnl_cancelaciones";
-            pnl_cancelaciones.Size = new Size(250, 137);
-            pnl_cancelaciones.TabIndex = 7;
-            // 
-            // pbcEquipos_modificar
-            // 
-            pbcEquipos_modificar.Image = Properties.Resources.boton_modificar;
-            pbcEquipos_modificar.Location = new Point(98, 93);
-            pbcEquipos_modificar.Name = "pbcEquipos_modificar";
-            pbcEquipos_modificar.Size = new Size(149, 39);
-            pbcEquipos_modificar.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbcEquipos_modificar.TabIndex = 5;
-            pbcEquipos_modificar.TabStop = false;
-            // 
-            // pbcEquipos_eliminar
-            // 
-            pbcEquipos_eliminar.Image = Properties.Resources.boton_eliminar;
-            pbcEquipos_eliminar.Location = new Point(98, 48);
-            pbcEquipos_eliminar.Name = "pbcEquipos_eliminar";
-            pbcEquipos_eliminar.Size = new Size(149, 39);
-            pbcEquipos_eliminar.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbcEquipos_eliminar.TabIndex = 4;
-            pbcEquipos_eliminar.TabStop = false;
-            // 
-            // pbc_Equiposagregar
-            // 
-            pbc_Equiposagregar.Image = Properties.Resources.boton_agregar;
-            pbc_Equiposagregar.Location = new Point(98, 3);
-            pbc_Equiposagregar.Name = "pbc_Equiposagregar";
-            pbc_Equiposagregar.Size = new Size(149, 39);
-            pbc_Equiposagregar.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbc_Equiposagregar.TabIndex = 3;
-            pbc_Equiposagregar.TabStop = false;
-            // 
-            // pbc_cancelaciones
-            // 
-            pbc_cancelaciones.Dock = DockStyle.Top;
-            pbc_cancelaciones.Image = Properties.Resources.img_cancelacion;
-            pbc_cancelaciones.Location = new Point(0, 312);
-            pbc_cancelaciones.Name = "pbc_cancelaciones";
-            pbc_cancelaciones.Size = new Size(250, 50);
-            pbc_cancelaciones.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbc_cancelaciones.TabIndex = 6;
-            pbc_cancelaciones.TabStop = false;
-            pbc_cancelaciones.Click += pbc_cancelaciones_Click;
             // 
             // pnl_reservas
             // 
@@ -359,7 +294,7 @@
             // 
             // pbc_Saloneseliminar
             // 
-            pbc_Saloneseliminar.Image = Properties.Resources.boton_eliminar;
+            pbc_Saloneseliminar.Image = Properties.Resources.img_cancelar;
             pbc_Saloneseliminar.Location = new Point(98, 45);
             pbc_Saloneseliminar.Name = "pbc_Saloneseliminar";
             pbc_Saloneseliminar.Size = new Size(149, 39);
@@ -428,6 +363,7 @@
             pbc_cerrarsesion.TabIndex = 4;
             pbc_cerrarsesion.TabStop = false;
             pbc_cerrarsesion.Visible = false;
+            pbc_cerrarsesion.Click += pbc_cerrarsesion_Click;
             // 
             // frm_recepcionista
             // 
@@ -458,11 +394,6 @@
             ((System.ComponentModel.ISupportInitialize)pbcTrabajadores_eliminar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbcTrabajadores_agregar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbc_trabajadores).EndInit();
-            pnl_cancelaciones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pbcEquipos_modificar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbcEquipos_eliminar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbc_Equiposagregar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbc_cancelaciones).EndInit();
             pnl_reservas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbcSalones_modificar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbc_Saloneseliminar).EndInit();
@@ -491,11 +422,6 @@
         private PictureBox pbcSalones_modificar;
         private PictureBox pbc_Saloneseliminar;
         private PictureBox pbc_Salonesagregar;
-        private PictureBox pbc_cancelaciones;
-        private Panel pnl_cancelaciones;
-        private PictureBox pbcEquipos_modificar;
-        private PictureBox pbcEquipos_eliminar;
-        private PictureBox pbc_Equiposagregar;
         private PictureBox pbc_trabajadores;
         private Panel pnl_trabajadores;
         private PictureBox pbcTrabajadores_modificar;

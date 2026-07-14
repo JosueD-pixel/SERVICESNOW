@@ -52,9 +52,9 @@ namespace SERVICESNOW
         private void OcultarSubMenus()
         {
             pnl_salones.Visible = false;
-            pnl_equipos.Visible = false;
             pnl_trabajadores.Visible = false;
-            pnl_horarios.Visible = false;
+            pnl_consultas.Visible = false;
+            pnl_funciones.Visible = false;
         }
 
         private void MostrarSubMenu(Panel subMenu)
@@ -74,20 +74,13 @@ namespace SERVICESNOW
             MostrarSubMenu(pnl_salones);
         }
 
-        private void btn_Equipos_Click(object sender, EventArgs e)
-        {
-            MostrarSubMenu(pnl_equipos);
-        }
 
         private void pbc_Trabajadores_Click(object sender, EventArgs e)
         {
             MostrarSubMenu(pnl_trabajadores);
         }
 
-        private void pbc_Horarios_Click(object sender, EventArgs e)
-        {
-            MostrarSubMenu(pnl_horarios);
-        }
+
 
         private void btn_menu_Click(object sender, EventArgs e)
         {
@@ -115,6 +108,21 @@ namespace SERVICESNOW
                 pbc_cerrarsesion.Visible = false;
                 cerrarSesion = true;
             }
+        }
+
+        private void pbc_cerrarsesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pbc_funciones_Click(object sender, EventArgs e)
+        {
+            MostrarSubMenu(pnl_funciones);
+        }
+
+        private void pbc_consultas_Click(object sender, EventArgs e)
+        {
+            MostrarSubMenu(pnl_consultas);
         }
     }
 }

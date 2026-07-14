@@ -10,20 +10,13 @@ namespace SERVICESNOW
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-     
-
-            using (frm_inicio login = new frm_inicio())
-            {
-                if (login.ShowDialog() == DialogResult.OK )
-                {
-                
-                    Application.Run(new frm_administrador());
-                }
-            }
             
 
-           
+            ApplicationConfiguration.Initialize();
+            Application.Run(new frm_inicio());
+
+
+
 
 
             //Application.Run(new Menu_principal());

@@ -97,7 +97,7 @@
             // 
             // pbx_inicio
             // 
-            pbx_inicio.Image = Properties.Resources.frm_imglogin;
+            pbx_inicio.Image = Properties.Resources.img_Sesion;
             pbx_inicio.Location = new Point(478, 36);
             pbx_inicio.Name = "pbx_inicio";
             pbx_inicio.Size = new Size(498, 582);

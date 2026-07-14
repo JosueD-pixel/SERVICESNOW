@@ -71,7 +71,7 @@ namespace SERVICESNOW
 
                 if (resp)
                 {
-                    this.Hide(); // Ocultamos el login
+                    this.Hide();
 
                     if (clsLogin.EsAdministrador)
                     {
@@ -84,7 +84,12 @@ namespace SERVICESNOW
                         recepcionista.ShowDialog();
                     }
 
-                    this.Close(); // Cuando cierren el formulario, también se cierra el login
+                    // Aquí solo cambió esta parte
+                    this.Show();
+
+                    txt_matricula.Clear();
+                    txt_contraseña.Clear();
+                    txt_matricula.Focus();
                 }
             }
             catch (Exception ex)

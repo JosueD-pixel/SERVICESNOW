@@ -37,21 +37,19 @@
             pbc_user = new PictureBox();
             btn_menu = new PictureBox();
             pnl_menu = new Panel();
-            pnl_horarios = new Panel();
-            pbcHorarios_modificar = new PictureBox();
-            pbcHorarios_agregar = new PictureBox();
-            pbcHorarios_eliminar = new PictureBox();
+            pnl_consultas = new Panel();
+            pbc_reservas = new PictureBox();
+            pbc_consultas = new PictureBox();
+            pnl_funciones = new Panel();
+            pbc_tiposalon = new PictureBox();
+            pbc_equipos = new PictureBox();
             pbc_horarios = new PictureBox();
+            pbc_funciones = new PictureBox();
             pnl_trabajadores = new Panel();
             pbcTrabajadores_modificar = new PictureBox();
             pbcTrabajadores_eliminar = new PictureBox();
             pbcTrabajadores_agregar = new PictureBox();
             pbc_trabajadores = new PictureBox();
-            pnl_equipos = new Panel();
-            pbcEquipos_modificar = new PictureBox();
-            pbcEquipos_eliminar = new PictureBox();
-            pbc_Equiposagregar = new PictureBox();
-            pbc_equipos = new PictureBox();
             pnl_salones = new Panel();
             pbcSalones_modificar = new PictureBox();
             pbc_Saloneseliminar = new PictureBox();
@@ -66,21 +64,19 @@
             ((System.ComponentModel.ISupportInitialize)pbc_user).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btn_menu).BeginInit();
             pnl_menu.SuspendLayout();
-            pnl_horarios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbcHorarios_modificar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbcHorarios_agregar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbcHorarios_eliminar).BeginInit();
+            pnl_consultas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbc_reservas).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbc_consultas).BeginInit();
+            pnl_funciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbc_tiposalon).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbc_equipos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbc_horarios).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbc_funciones).BeginInit();
             pnl_trabajadores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbcTrabajadores_modificar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbcTrabajadores_eliminar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbcTrabajadores_agregar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbc_trabajadores).BeginInit();
-            pnl_equipos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbcEquipos_modificar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbcEquipos_eliminar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbc_Equiposagregar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbc_equipos).BeginInit();
             pnl_salones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbcSalones_modificar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbc_Saloneseliminar).BeginInit();
@@ -172,12 +168,12 @@
             // pnl_menu
             // 
             pnl_menu.BackColor = Color.FromArgb(92, 64, 51);
-            pnl_menu.Controls.Add(pnl_horarios);
-            pnl_menu.Controls.Add(pbc_horarios);
+            pnl_menu.Controls.Add(pnl_consultas);
+            pnl_menu.Controls.Add(pbc_consultas);
+            pnl_menu.Controls.Add(pnl_funciones);
+            pnl_menu.Controls.Add(pbc_funciones);
             pnl_menu.Controls.Add(pnl_trabajadores);
             pnl_menu.Controls.Add(pbc_trabajadores);
-            pnl_menu.Controls.Add(pnl_equipos);
-            pnl_menu.Controls.Add(pbc_equipos);
             pnl_menu.Controls.Add(pnl_salones);
             pnl_menu.Controls.Add(pbc_salones);
             pnl_menu.Controls.Add(pnl_logo1);
@@ -187,58 +183,89 @@
             pnl_menu.Size = new Size(250, 995);
             pnl_menu.TabIndex = 1;
             // 
-            // pnl_horarios
+            // pnl_consultas
             // 
-            pnl_horarios.Controls.Add(pbcHorarios_modificar);
-            pnl_horarios.Controls.Add(pbcHorarios_agregar);
-            pnl_horarios.Controls.Add(pbcHorarios_eliminar);
-            pnl_horarios.Dock = DockStyle.Top;
-            pnl_horarios.Location = new Point(0, 736);
-            pnl_horarios.Name = "pnl_horarios";
-            pnl_horarios.Size = new Size(250, 137);
-            pnl_horarios.TabIndex = 10;
+            pnl_consultas.Controls.Add(pbc_reservas);
+            pnl_consultas.Dock = DockStyle.Top;
+            pnl_consultas.Location = new Point(0, 736);
+            pnl_consultas.Name = "pnl_consultas";
+            pnl_consultas.Size = new Size(250, 125);
+            pnl_consultas.TabIndex = 12;
             // 
-            // pbcHorarios_modificar
+            // pbc_reservas
             // 
-            pbcHorarios_modificar.Image = Properties.Resources.boton_modificar;
-            pbcHorarios_modificar.Location = new Point(98, 90);
-            pbcHorarios_modificar.Name = "pbcHorarios_modificar";
-            pbcHorarios_modificar.Size = new Size(149, 39);
-            pbcHorarios_modificar.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbcHorarios_modificar.TabIndex = 8;
-            pbcHorarios_modificar.TabStop = false;
+            pbc_reservas.Image = Properties.Resources.img_reservas2;
+            pbc_reservas.Location = new Point(98, 0);
+            pbc_reservas.Name = "pbc_reservas";
+            pbc_reservas.Size = new Size(149, 39);
+            pbc_reservas.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbc_reservas.TabIndex = 8;
+            pbc_reservas.TabStop = false;
             // 
-            // pbcHorarios_agregar
+            // pbc_consultas
             // 
-            pbcHorarios_agregar.Image = Properties.Resources.boton_agregar;
-            pbcHorarios_agregar.Location = new Point(98, 0);
-            pbcHorarios_agregar.Name = "pbcHorarios_agregar";
-            pbcHorarios_agregar.Size = new Size(149, 39);
-            pbcHorarios_agregar.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbcHorarios_agregar.TabIndex = 6;
-            pbcHorarios_agregar.TabStop = false;
+            pbc_consultas.Dock = DockStyle.Top;
+            pbc_consultas.Image = Properties.Resources.img_consultas;
+            pbc_consultas.Location = new Point(0, 686);
+            pbc_consultas.Name = "pbc_consultas";
+            pbc_consultas.Size = new Size(250, 50);
+            pbc_consultas.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbc_consultas.TabIndex = 11;
+            pbc_consultas.TabStop = false;
+            pbc_consultas.Click += pbc_consultas_Click;
             // 
-            // pbcHorarios_eliminar
+            // pnl_funciones
             // 
-            pbcHorarios_eliminar.Image = Properties.Resources.boton_eliminar;
-            pbcHorarios_eliminar.Location = new Point(98, 45);
-            pbcHorarios_eliminar.Name = "pbcHorarios_eliminar";
-            pbcHorarios_eliminar.Size = new Size(149, 39);
-            pbcHorarios_eliminar.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbcHorarios_eliminar.TabIndex = 7;
-            pbcHorarios_eliminar.TabStop = false;
+            pnl_funciones.Controls.Add(pbc_tiposalon);
+            pnl_funciones.Controls.Add(pbc_equipos);
+            pnl_funciones.Controls.Add(pbc_horarios);
+            pnl_funciones.Dock = DockStyle.Top;
+            pnl_funciones.Location = new Point(0, 549);
+            pnl_funciones.Name = "pnl_funciones";
+            pnl_funciones.Size = new Size(250, 137);
+            pnl_funciones.TabIndex = 10;
+            // 
+            // pbc_tiposalon
+            // 
+            pbc_tiposalon.Image = Properties.Resources.img_tiposalon;
+            pbc_tiposalon.Location = new Point(98, 90);
+            pbc_tiposalon.Name = "pbc_tiposalon";
+            pbc_tiposalon.Size = new Size(149, 39);
+            pbc_tiposalon.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbc_tiposalon.TabIndex = 8;
+            pbc_tiposalon.TabStop = false;
+            // 
+            // pbc_equipos
+            // 
+            pbc_equipos.Image = Properties.Resources.img;
+            pbc_equipos.Location = new Point(98, 0);
+            pbc_equipos.Name = "pbc_equipos";
+            pbc_equipos.Size = new Size(149, 39);
+            pbc_equipos.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbc_equipos.TabIndex = 6;
+            pbc_equipos.TabStop = false;
             // 
             // pbc_horarios
             // 
-            pbc_horarios.Dock = DockStyle.Top;
-            pbc_horarios.Image = Properties.Resources.img_horarios;
-            pbc_horarios.Location = new Point(0, 686);
+            pbc_horarios.Image = Properties.Resources.img_horarios1;
+            pbc_horarios.Location = new Point(98, 45);
             pbc_horarios.Name = "pbc_horarios";
-            pbc_horarios.Size = new Size(250, 50);
+            pbc_horarios.Size = new Size(149, 39);
             pbc_horarios.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbc_horarios.TabIndex = 9;
+            pbc_horarios.TabIndex = 7;
             pbc_horarios.TabStop = false;
-            pbc_horarios.Click += pbc_Horarios_Click;
+            // 
+            // pbc_funciones
+            // 
+            pbc_funciones.Dock = DockStyle.Top;
+            pbc_funciones.Image = Properties.Resources.img_funciones;
+            pbc_funciones.Location = new Point(0, 499);
+            pbc_funciones.Name = "pbc_funciones";
+            pbc_funciones.Size = new Size(250, 50);
+            pbc_funciones.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbc_funciones.TabIndex = 9;
+            pbc_funciones.TabStop = false;
+            pbc_funciones.Click += pbc_funciones_Click;
             // 
             // pnl_trabajadores
             // 
@@ -246,7 +273,7 @@
             pnl_trabajadores.Controls.Add(pbcTrabajadores_eliminar);
             pnl_trabajadores.Controls.Add(pbcTrabajadores_agregar);
             pnl_trabajadores.Dock = DockStyle.Top;
-            pnl_trabajadores.Location = new Point(0, 549);
+            pnl_trabajadores.Location = new Point(0, 362);
             pnl_trabajadores.Name = "pnl_trabajadores";
             pnl_trabajadores.Size = new Size(250, 137);
             pnl_trabajadores.TabIndex = 8;
@@ -285,66 +312,13 @@
             // 
             pbc_trabajadores.Dock = DockStyle.Top;
             pbc_trabajadores.Image = Properties.Resources.img_trabajadores;
-            pbc_trabajadores.Location = new Point(0, 499);
+            pbc_trabajadores.Location = new Point(0, 312);
             pbc_trabajadores.Name = "pbc_trabajadores";
             pbc_trabajadores.Size = new Size(250, 50);
             pbc_trabajadores.SizeMode = PictureBoxSizeMode.StretchImage;
             pbc_trabajadores.TabIndex = 7;
             pbc_trabajadores.TabStop = false;
             pbc_trabajadores.Click += pbc_Trabajadores_Click;
-            // 
-            // pnl_equipos
-            // 
-            pnl_equipos.Controls.Add(pbcEquipos_modificar);
-            pnl_equipos.Controls.Add(pbcEquipos_eliminar);
-            pnl_equipos.Controls.Add(pbc_Equiposagregar);
-            pnl_equipos.Dock = DockStyle.Top;
-            pnl_equipos.Location = new Point(0, 362);
-            pnl_equipos.Name = "pnl_equipos";
-            pnl_equipos.Size = new Size(250, 137);
-            pnl_equipos.TabIndex = 6;
-            // 
-            // pbcEquipos_modificar
-            // 
-            pbcEquipos_modificar.Image = Properties.Resources.boton_modificar;
-            pbcEquipos_modificar.Location = new Point(98, 93);
-            pbcEquipos_modificar.Name = "pbcEquipos_modificar";
-            pbcEquipos_modificar.Size = new Size(149, 39);
-            pbcEquipos_modificar.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbcEquipos_modificar.TabIndex = 5;
-            pbcEquipos_modificar.TabStop = false;
-            // 
-            // pbcEquipos_eliminar
-            // 
-            pbcEquipos_eliminar.Image = Properties.Resources.boton_eliminar;
-            pbcEquipos_eliminar.Location = new Point(98, 48);
-            pbcEquipos_eliminar.Name = "pbcEquipos_eliminar";
-            pbcEquipos_eliminar.Size = new Size(149, 39);
-            pbcEquipos_eliminar.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbcEquipos_eliminar.TabIndex = 4;
-            pbcEquipos_eliminar.TabStop = false;
-            // 
-            // pbc_Equiposagregar
-            // 
-            pbc_Equiposagregar.Image = Properties.Resources.boton_agregar;
-            pbc_Equiposagregar.Location = new Point(98, 3);
-            pbc_Equiposagregar.Name = "pbc_Equiposagregar";
-            pbc_Equiposagregar.Size = new Size(149, 39);
-            pbc_Equiposagregar.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbc_Equiposagregar.TabIndex = 3;
-            pbc_Equiposagregar.TabStop = false;
-            // 
-            // pbc_equipos
-            // 
-            pbc_equipos.Dock = DockStyle.Top;
-            pbc_equipos.Image = Properties.Resources.img_Equipos;
-            pbc_equipos.Location = new Point(0, 312);
-            pbc_equipos.Name = "pbc_equipos";
-            pbc_equipos.Size = new Size(250, 50);
-            pbc_equipos.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbc_equipos.TabIndex = 5;
-            pbc_equipos.TabStop = false;
-            pbc_equipos.Click += btn_Equipos_Click;
             // 
             // pnl_salones
             // 
@@ -390,7 +364,7 @@
             // pbc_salones
             // 
             pbc_salones.Dock = DockStyle.Top;
-            pbc_salones.Image = Properties.Resources.img_Salones;
+            pbc_salones.Image = Properties.Resources.img_salas;
             pbc_salones.Location = new Point(0, 125);
             pbc_salones.Name = "pbc_salones";
             pbc_salones.Size = new Size(250, 50);
@@ -429,6 +403,7 @@
             pbc_cerrarsesion.TabIndex = 3;
             pbc_cerrarsesion.TabStop = false;
             pbc_cerrarsesion.Visible = false;
+            pbc_cerrarsesion.Click += pbc_cerrarsesion_Click;
             // 
             // pnl_fromularios
             // 
@@ -459,21 +434,19 @@
             ((System.ComponentModel.ISupportInitialize)pbc_user).EndInit();
             ((System.ComponentModel.ISupportInitialize)btn_menu).EndInit();
             pnl_menu.ResumeLayout(false);
-            pnl_horarios.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pbcHorarios_modificar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbcHorarios_agregar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbcHorarios_eliminar).EndInit();
+            pnl_consultas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pbc_reservas).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbc_consultas).EndInit();
+            pnl_funciones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pbc_tiposalon).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbc_equipos).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbc_horarios).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbc_funciones).EndInit();
             pnl_trabajadores.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbcTrabajadores_modificar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbcTrabajadores_eliminar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbcTrabajadores_agregar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbc_trabajadores).EndInit();
-            pnl_equipos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pbcEquipos_modificar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbcEquipos_eliminar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbc_Equiposagregar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbc_equipos).EndInit();
             pnl_salones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbcSalones_modificar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbc_Saloneseliminar).EndInit();
@@ -499,10 +472,8 @@
         private PictureBox pbc_logo;
         private PictureBox pbc_salones;
         private Panel pnl_salones;
-        private Panel pnl_equipos;
-        private PictureBox pbc_equipos;
-        private Panel pnl_horarios;
-        private PictureBox pbc_horarios;
+        private Panel pnl_funciones;
+        private PictureBox pbc_funciones;
         private Panel pnl_trabajadores;
         private PictureBox pbc_trabajadores;
         private PictureBox pbcSalones_modificar;
@@ -511,13 +482,13 @@
         private PictureBox pbcTrabajadores_modificar;
         private PictureBox pbcTrabajadores_eliminar;
         private PictureBox pbcTrabajadores_agregar;
-        private PictureBox pbcEquipos_modificar;
-        private PictureBox pbcEquipos_eliminar;
-        private PictureBox pbc_Equiposagregar;
-        private PictureBox pbcHorarios_modificar;
-        private PictureBox pbcHorarios_agregar;
-        private PictureBox pbcHorarios_eliminar;
+        private PictureBox pbc_tiposalon;
+        private PictureBox pbc_equipos;
+        private PictureBox pbc_horarios;
         private PictureBox pbc_cerrarsesion;
         private Panel pnl_fromularios;
+        private Panel pnl_consultas;
+        private PictureBox pbc_reservas;
+        private PictureBox pbc_consultas;
     }
 }

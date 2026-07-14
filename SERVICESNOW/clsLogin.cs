@@ -57,7 +57,6 @@ namespace SERVICESNOW
                                 {
                                     throw new Exception($"El perfil {nombreRol} no tiene permisos para acceder");
                                 }
-                                MessageBox.Show("Tu perfil es: " + nombreRol, "Sistema");
                                 return true;
                             }
                             else
