@@ -15,6 +15,8 @@ namespace SERVICESNOW
         clsMenu menu;
         private bool cerrarSesion = false;
         private bool menuAbierto = true;
+
+        clsMenu menu;
         public frm_administrador()
         {
             InitializeComponent();
@@ -133,15 +135,22 @@ namespace SERVICESNOW
 
         }
 
-        private void pbc_equipos_Click(object sender, EventArgs e)
+        private void pbc_Salonesagregar_Click(object sender, EventArgs e)
         {
             menu = new clsMenu();
-            menu.AgregarAlContenedor(new frmFuncionesEquipos(), pnl_fromularios);
+            menu.AgregarAlContenedor(new frm_trabajadores_AGREGAR(), pnl_fromularios);
         }
 
-        private void pnl_superior_Paint(object sender, PaintEventArgs e)
+        private void pbc_Saloneseliminar_Click(object sender, EventArgs e)
         {
+            menu = new clsMenu();
+            menu.AgregarAlContenedor(new frm_trabjadores_ELIMINAR(), pnl_fromularios);
+        }
 
+        private void pbcSalones_modificar_Click(object sender, EventArgs e)
+        {
+            menu = new clsMenu();
+            menu.AgregarAlContenedor(new frm_trabajadores_MODIFICAR(), pnl_fromularios);
         }
     }
 }
