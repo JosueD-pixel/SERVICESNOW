@@ -8,10 +8,10 @@ namespace SERVICESNOW
 {
     internal class clsConexion
     {
-        private string host = "localhost";
-        private string bd = "dbservicesnow";
-        private string usuario = "root";
-        private string password = "";
+        private string host = "mysql-nathz.alwaysdata.net";
+        private string bd = "nathz_dbservicesnow";
+        private string usuario = "nathz_admin";
+        private string password = "admin@123";
         private string puerto = "3306";
 
         private string cadenaConexion => $"server= {host};database={bd};user={usuario};password={password};port={puerto}";
