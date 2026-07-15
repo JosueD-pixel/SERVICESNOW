@@ -9,7 +9,7 @@ namespace SERVICESNOW
     internal class clsConexion
     {
         private string host = "localhost";
-        private string bd = "servicesnow";
+        private string bd = "dbservicesnow";
         private string usuario = "root";
         private string password = "";
         private string puerto = "3306";

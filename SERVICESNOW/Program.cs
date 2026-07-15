@@ -15,11 +15,7 @@ namespace SERVICESNOW
             ApplicationConfiguration.Initialize();
             Application.Run(new frm_inicio());
             */
-
-
-
-
-            Application.Run(new frmFuncionesEquipos());
+            Application.Run(new frm_administrador());
         }
     }
 } 

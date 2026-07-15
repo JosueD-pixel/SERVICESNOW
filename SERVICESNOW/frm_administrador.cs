@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Security.Permissions;
+using System.Security.Principal;
 using System.Text;
 using System.Windows.Forms;
 
@@ -11,6 +12,7 @@ namespace SERVICESNOW
 {
     public partial class frm_administrador : Form
     {
+        clsMenu menu;
         private bool cerrarSesion = false;
         private bool menuAbierto = true;
         public frm_administrador()
@@ -128,7 +130,18 @@ namespace SERVICESNOW
 
         private void pbc_horarios_Click(object sender, EventArgs e)
         {
-          
+
+        }
+
+        private void pbc_equipos_Click(object sender, EventArgs e)
+        {
+            menu = new clsMenu();
+            menu.AgregarAlContenedor(new frmFuncionesEquipos(), pnl_fromularios);
+        }
+
+        private void pnl_superior_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
