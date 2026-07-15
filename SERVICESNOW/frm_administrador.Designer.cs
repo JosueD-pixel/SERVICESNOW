@@ -41,7 +41,6 @@
             pbc_reservas = new PictureBox();
             pbc_consultas = new PictureBox();
             pnl_funciones = new Panel();
-            pbc_tiposalon = new PictureBox();
             pbc_equipos = new PictureBox();
             pbc_horarios = new PictureBox();
             pbc_funciones = new PictureBox();
@@ -68,7 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)pbc_reservas).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbc_consultas).BeginInit();
             pnl_funciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbc_tiposalon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbc_equipos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbc_horarios).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbc_funciones).BeginInit();
@@ -101,6 +99,7 @@
             pnl_superior.Name = "pnl_superior";
             pnl_superior.Size = new Size(1539, 60);
             pnl_superior.TabIndex = 0;
+            pnl_superior.Paint += pnl_superior_Paint;
             // 
             // pnl_logo
             // 
@@ -216,7 +215,6 @@
             // 
             // pnl_funciones
             // 
-            pnl_funciones.Controls.Add(pbc_tiposalon);
             pnl_funciones.Controls.Add(pbc_equipos);
             pnl_funciones.Controls.Add(pbc_horarios);
             pnl_funciones.Dock = DockStyle.Top;
@@ -244,6 +242,7 @@
             pbc_equipos.SizeMode = PictureBoxSizeMode.StretchImage;
             pbc_equipos.TabIndex = 6;
             pbc_equipos.TabStop = false;
+            pbc_equipos.Click += pbc_equipos_Click;
             // 
             // pbc_horarios
             // 
@@ -442,7 +441,6 @@
             ((System.ComponentModel.ISupportInitialize)pbc_reservas).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbc_consultas).EndInit();
             pnl_funciones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pbc_tiposalon).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbc_equipos).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbc_horarios).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbc_funciones).EndInit();
@@ -486,7 +484,6 @@
         private PictureBox pbcTrabajadores_modificar;
         private PictureBox pbcTrabajadores_eliminar;
         private PictureBox pbcTrabajadores_agregar;
-        private PictureBox pbc_tiposalon;
         private PictureBox pbc_equipos;
         private PictureBox pbc_horarios;
         private PictureBox pbc_cerrarsesion;

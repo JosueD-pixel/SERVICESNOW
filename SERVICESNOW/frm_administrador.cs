@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Security.Permissions;
+using System.Security.Principal;
 using System.Text;
 using System.Windows.Forms;
 
@@ -11,6 +12,7 @@ namespace SERVICESNOW
 {
     public partial class frm_administrador : Form
     {
+        clsMenu menu;
         private bool cerrarSesion = false;
         private bool menuAbierto = true;
 
