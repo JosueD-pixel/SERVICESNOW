@@ -138,5 +138,10 @@ namespace SERVICESNOW
             menu = new clsMenu();
             menu.AgregarAlContenedor(new frmFuncionesEquipos(), pnl_fromularios);
         }
+
+        private void pnl_superior_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

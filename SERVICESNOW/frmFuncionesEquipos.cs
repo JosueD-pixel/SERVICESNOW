@@ -16,7 +16,6 @@ namespace SERVICESNOW
         public frmFuncionesEquipos()
         {
             InitializeComponent();
-            CargarGrid();
         }
         private void frmFuncionesEquipos_Load(object sender, EventArgs e)
         {
@@ -24,15 +23,17 @@ namespace SERVICESNOW
             dgvEquipos.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells; // ajusta filas
             dgvEquipos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvEquipos.MultiSelect = false;
+            CargarGrid();
         }
         public void CargarGrid()
         {
             equipos = new clsEquipos();
             dgvEquipos.DataSource = null;
-            dgvEquipos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             try
             {
+                dgvEquipos.SuspendLayout();
                 dgvEquipos.DataSource = equipos.CargarDataGrid();
+                dgvEquipos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvEquipos.ClearSelection();
                 dgvEquipos.CurrentCell = null;
 
@@ -47,7 +48,7 @@ namespace SERVICESNOW
             equipos = new clsEquipos();
             string texto = txtNombreEquipos.Text.Trim();
             dgvEquipos.DataSource = null;
-            dgvEquipos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvEquipos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             try
             {
                 // Cuando el TextBox queda vacío, mostrar todos los equipos
@@ -80,7 +81,7 @@ namespace SERVICESNOW
         {
             idEquipo = 0;
             equipos.LimpiarPanel(pnlEquipos);
-            txtID.Focus();
+            txtNombreEquipamiento.Focus();
             dgvEquipos.ClearSelection();
             dgvEquipos.CurrentCell = null;
         }
@@ -89,38 +90,47 @@ namespace SERVICESNOW
         {
             try
             {
-
-                // Validar nombre obligatorio
+                // Validar nombre
                 if (string.IsNullOrWhiteSpace(txtNombreEquipamiento.Text))
                 {
-                    MessageBox.Show(
-                        "Ingrese el nombre del equipamiento.",
-                        "Datos incompletos",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning
-                    );
+                    MessageBox.Show( "Ingrese el nombre del equipamiento.", "Datos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     txtNombreEquipamiento.Focus();
-                    return; // Detiene el guardado
+                    return;
                 }
 
-                // Validar que al menos una característica esté seleccionada
+                // Validar características
                 if (!chkAudio.Checked &&
                     !chkPizarron.Checked &&
                     !chkPantalla.Checked &&
                     !chkProyector.Checked &&
                     !chkRed.Checked)
                 {
-                    MessageBox.Show(
-                        "Seleccione al menos una característica del equipamiento.",
-                        "Datos incompletos",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning
-                    );
+                    MessageBox.Show("Seleccione al menos una característica del equipamiento.", "Datos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     return;
                 }
+                // 0 = guardar, 1 = actualizar
                 int tipoOperacion = idEquipo == 0 ? 0 : 1;
+
+                string accion = tipoOperacion == 0
+                    ? "guardar"
+                    : "actualizar";
+
+                DialogResult respuesta = MessageBox.Show(
+                    $"¿Está seguro de que desea {accion} este registro?",
+                    "Confirmar operación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                // Si responde No, detener todo
+                if (respuesta != DialogResult.Yes)
+                {
+                    return;
+                }
+
+                equipos = new clsEquipos();
 
                 equipos.IdEquipo = idEquipo;
                 equipos.NombreEquipo = txtNombreEquipamiento.Text.Trim();
@@ -131,44 +141,41 @@ namespace SERVICESNOW
                 equipos.Proyector = chkProyector.Checked;
                 equipos.Red = chkRed.Checked;
 
-                string msg = "";
-                if (tipoOperacion != 0)
-                {
-                    var resp = MessageBox.Show("Confirmar que desea guardar el dato seleccionado", "ALERTA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (resp == DialogResult.Yes)
-                    {
-                        msg = equipos.GuardarActualizar(tipoOperacion);
-                        MessageBox.Show(msg);
-                    }
-                }
-                else
-                {
-                    msg = equipos.GuardarActualizar(tipoOperacion);
-                    MessageBox.Show(msg);
-                }
+                string mensaje = equipos.GuardarActualizar(tipoOperacion);
+
+                MessageBox.Show(
+                    mensaje,
+                    "Equipamientos",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+
+                // Recargar tabla
                 CargarGrid();
+
+                // Limpiar campos y CheckBox
+                equipos.LimpiarPanel(pnlEquipos);
+
+                // Regresar al modo guardar
+                idEquipo = 0;
+                txtID.Clear();
+                btnGuardar.Text = "Guardar";
+
+                // Deseleccionar tabla
+                dgvEquipos.ClearSelection();
+                dgvEquipos.CurrentCell = null;
+
+                txtNombreEquipamiento.Focus();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(
+                    ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
             }
-            // Recargar la tabla
-            CargarGrid();
-
-            // Limpiar los campos
-            equipos.LimpiarPanel(pnlEquipos);
-
-            // Regresar al modo de registro nuevo
-            idEquipo = 0;
-            txtID.Clear();
-            btnGuardar.Text = "Guardar";
-
-            // Quitar selección de la tabla
-            dgvEquipos.ClearSelection();
-            dgvEquipos.CurrentCell = null;
-
-            txtNombreEquipamiento.Focus();
-
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

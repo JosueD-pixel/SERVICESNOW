@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             txtID = new TextBox();
             label1 = new Label();
             pnlSuperior = new Panel();
@@ -48,14 +48,14 @@
             txtNombreEquipamiento = new TextBox();
             label2 = new Label();
             panel1 = new Panel();
+            btnModificar = new Button();
             label8 = new Label();
             txtNombreEquipos = new TextBox();
             dgvEquipos = new DataGridView();
-            label7 = new Label();
-            label9 = new Label();
             btnGuardar = new Button();
             btnEliminar = new Button();
-            btnModificar = new Button();
+            label7 = new Label();
+            label9 = new Label();
             pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pnlEquipos.SuspendLayout();
@@ -91,11 +91,12 @@
             pnlSuperior.Dock = DockStyle.Top;
             pnlSuperior.Location = new Point(0, 0);
             pnlSuperior.Name = "pnlSuperior";
-            pnlSuperior.Size = new Size(1634, 77);
+            pnlSuperior.Size = new Size(1432, 77);
             pnlSuperior.TabIndex = 2;
             // 
             // pictureBox1
             // 
+            pictureBox1.Image = Properties.Resources.equipos;
             pictureBox1.Location = new Point(754, 12);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(65, 57);
@@ -129,9 +130,9 @@
             pnlEquipos.Controls.Add(label2);
             pnlEquipos.Controls.Add(txtID);
             pnlEquipos.Controls.Add(label1);
-            pnlEquipos.Location = new Point(79, 114);
+            pnlEquipos.Location = new Point(29, 100);
             pnlEquipos.Name = "pnlEquipos";
-            pnlEquipos.Size = new Size(605, 597);
+            pnlEquipos.Size = new Size(509, 480);
             pnlEquipos.TabIndex = 0;
             // 
             // btnLimpiar
@@ -140,7 +141,7 @@
             btnLimpiar.BackgroundImageLayout = ImageLayout.Zoom;
             btnLimpiar.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnLimpiar.ForeColor = Color.White;
-            btnLimpiar.Location = new Point(357, 490);
+            btnLimpiar.Location = new Point(298, 392);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(192, 68);
             btnLimpiar.TabIndex = 16;
@@ -192,7 +193,7 @@
             // 
             chkProyector.AutoSize = true;
             chkProyector.Font = new Font("Segoe UI", 12F);
-            chkProyector.Location = new Point(322, 331);
+            chkProyector.Location = new Point(298, 284);
             chkProyector.Name = "chkProyector";
             chkProyector.Size = new Size(119, 32);
             chkProyector.TabIndex = 5;
@@ -203,7 +204,7 @@
             // 
             chkPantalla.AutoSize = true;
             chkPantalla.Font = new Font("Segoe UI", 12F);
-            chkPantalla.Location = new Point(322, 284);
+            chkPantalla.Location = new Point(298, 336);
             chkPantalla.Name = "chkPantalla";
             chkPantalla.Size = new Size(102, 32);
             chkPantalla.TabIndex = 6;
@@ -253,21 +254,38 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(217, 199, 184);
+            panel1.Controls.Add(btnModificar);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(txtNombreEquipos);
             panel1.Controls.Add(dgvEquipos);
+            panel1.Controls.Add(btnGuardar);
+            panel1.Controls.Add(btnEliminar);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(label9);
-            panel1.Location = new Point(722, 114);
+            panel1.Location = new Point(553, 100);
             panel1.Name = "panel1";
-            panel1.Size = new Size(875, 397);
+            panel1.Size = new Size(867, 480);
             panel1.TabIndex = 11;
+            // 
+            // btnModificar
+            // 
+            btnModificar.BackColor = Color.FromArgb(92, 64, 51);
+            btnModificar.BackgroundImageLayout = ImageLayout.Zoom;
+            btnModificar.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnModificar.ForeColor = Color.WhiteSmoke;
+            btnModificar.Location = new Point(48, 403);
+            btnModificar.Name = "btnModificar";
+            btnModificar.Size = new Size(192, 68);
+            btnModificar.TabIndex = 16;
+            btnModificar.Text = "Modificar";
+            btnModificar.UseVisualStyleBackColor = false;
+            btnModificar.Click += btnModificar_Click;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(593, 17);
+            label8.Location = new Point(591, 16);
             label8.Name = "label8";
             label8.Size = new Size(255, 28);
             label8.TabIndex = 11;
@@ -276,7 +294,7 @@
             // txtNombreEquipos
             // 
             txtNombreEquipos.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombreEquipos.Location = new Point(593, 57);
+            txtNombreEquipos.Location = new Point(597, 57);
             txtNombreEquipos.Name = "txtNombreEquipos";
             txtNombreEquipos.Size = new Size(249, 34);
             txtNombreEquipos.TabIndex = 11;
@@ -290,31 +308,59 @@
             dgvEquipos.AllowUserToResizeRows = false;
             dgvEquipos.BackgroundColor = Color.FromArgb(217, 199, 184);
             dgvEquipos.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(92, 64, 51);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(201, 123, 99);
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvEquipos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(92, 64, 51);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(201, 123, 99);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvEquipos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvEquipos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Window;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(201, 123, 99);
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dgvEquipos.DefaultCellStyle = dataGridViewCellStyle4;
-            dgvEquipos.Location = new Point(44, 112);
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(201, 123, 99);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvEquipos.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvEquipos.Location = new Point(18, 112);
             dgvEquipos.MultiSelect = false;
             dgvEquipos.Name = "dgvEquipos";
             dgvEquipos.RowHeadersVisible = false;
             dgvEquipos.RowHeadersWidth = 51;
             dgvEquipos.RowTemplate.Height = 32;
-            dgvEquipos.Size = new Size(798, 243);
+            dgvEquipos.Size = new Size(828, 243);
             dgvEquipos.TabIndex = 12;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.BackColor = Color.FromArgb(92, 64, 51);
+            btnGuardar.BackgroundImageLayout = ImageLayout.Zoom;
+            btnGuardar.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGuardar.ForeColor = Color.WhiteSmoke;
+            btnGuardar.Location = new Point(274, 403);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(192, 68);
+            btnGuardar.TabIndex = 15;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = false;
+            btnGuardar.Click += btnGuardar_Click;
+            // 
+            // btnEliminar
+            // 
+            btnEliminar.BackColor = Color.FromArgb(92, 64, 51);
+            btnEliminar.BackgroundImageLayout = ImageLayout.Zoom;
+            btnEliminar.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEliminar.ForeColor = Color.White;
+            btnEliminar.Location = new Point(502, 403);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(192, 68);
+            btnEliminar.TabIndex = 14;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // label7
             // 
@@ -335,60 +381,15 @@
             label9.Size = new Size(0, 28);
             label9.TabIndex = 8;
             // 
-            // btnGuardar
-            // 
-            btnGuardar.BackColor = Color.FromArgb(92, 64, 51);
-            btnGuardar.BackgroundImageLayout = ImageLayout.Zoom;
-            btnGuardar.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnGuardar.ForeColor = Color.WhiteSmoke;
-            btnGuardar.Location = new Point(1100, 542);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(192, 68);
-            btnGuardar.TabIndex = 15;
-            btnGuardar.Text = "Guardar";
-            btnGuardar.UseVisualStyleBackColor = false;
-            btnGuardar.Click += btnGuardar_Click;
-            // 
-            // btnEliminar
-            // 
-            btnEliminar.BackColor = Color.FromArgb(92, 64, 51);
-            btnEliminar.BackgroundImageLayout = ImageLayout.Zoom;
-            btnEliminar.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(1336, 542);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(192, 68);
-            btnEliminar.TabIndex = 14;
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.UseVisualStyleBackColor = false;
-            btnEliminar.Click += btnEliminar_Click;
-            // 
-            // btnModificar
-            // 
-            btnModificar.BackColor = Color.FromArgb(92, 64, 51);
-            btnModificar.BackgroundImageLayout = ImageLayout.Zoom;
-            btnModificar.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnModificar.ForeColor = Color.WhiteSmoke;
-            btnModificar.Location = new Point(868, 542);
-            btnModificar.Name = "btnModificar";
-            btnModificar.Size = new Size(192, 68);
-            btnModificar.TabIndex = 16;
-            btnModificar.Text = "Modificar";
-            btnModificar.UseVisualStyleBackColor = false;
-            btnModificar.Click += btnModificar_Click;
-            // 
             // frmFuncionesEquipos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 251, 245);
-            ClientSize = new Size(1634, 788);
-            Controls.Add(btnModificar);
+            ClientSize = new Size(1432, 592);
             Controls.Add(panel1);
             Controls.Add(pnlSuperior);
-            Controls.Add(btnGuardar);
             Controls.Add(pnlEquipos);
-            Controls.Add(btnEliminar);
             Name = "frmFuncionesEquipos";
             Text = "frmFuncionesEquipos";
             Load += frmFuncionesEquipos_Load;
