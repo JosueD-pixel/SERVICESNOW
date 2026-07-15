@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Security.Permissions;
 using System.Text;
 using System.Windows.Forms;
 
@@ -123,6 +124,11 @@ namespace SERVICESNOW
         private void pbc_consultas_Click(object sender, EventArgs e)
         {
             MostrarSubMenu(pnl_consultas);
+        }
+
+        private void pbc_horarios_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }
