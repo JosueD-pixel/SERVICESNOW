@@ -98,17 +98,15 @@
             pnl_superior.Controls.Add(btn_menu);
             pnl_superior.Dock = DockStyle.Top;
             pnl_superior.Location = new Point(0, 0);
-            pnl_superior.Margin = new Padding(4, 4, 4, 4);
             pnl_superior.Name = "pnl_superior";
-            pnl_superior.Size = new Size(1916, 75);
+            pnl_superior.Size = new Size(1539, 60);
             pnl_superior.TabIndex = 0;
             // 
             // pnl_logo
             // 
-            pnl_logo.Location = new Point(4, 75);
-            pnl_logo.Margin = new Padding(4, 4, 4, 4);
+            pnl_logo.Location = new Point(3, 60);
             pnl_logo.Name = "pnl_logo";
-            pnl_logo.Size = new Size(312, 156);
+            pnl_logo.Size = new Size(250, 125);
             pnl_logo.TabIndex = 2;
             // 
             // label1
@@ -117,20 +115,18 @@
             label1.BackColor = Color.FromArgb(92, 64, 51);
             label1.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(246, 240, 230);
-            label1.Location = new Point(91, 11);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(73, 9);
             label1.Name = "label1";
-            label1.Size = new Size(245, 45);
+            label1.Size = new Size(207, 38);
             label1.TabIndex = 5;
             label1.Text = "Menu principal";
             // 
             // pbc_boton
             // 
             pbc_boton.Image = Properties.Resources.icn_userbajo;
-            pbc_boton.Location = new Point(2312, 8);
-            pbc_boton.Margin = new Padding(4, 4, 4, 4);
+            pbc_boton.Location = new Point(1850, 6);
             pbc_boton.Name = "pbc_boton";
-            pbc_boton.Size = new Size(72, 68);
+            pbc_boton.Size = new Size(58, 54);
             pbc_boton.SizeMode = PictureBoxSizeMode.StretchImage;
             pbc_boton.TabIndex = 5;
             pbc_boton.TabStop = false;
@@ -142,20 +138,18 @@
             lbl_usuario.BackColor = Color.FromArgb(92, 64, 51);
             lbl_usuario.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             lbl_usuario.ForeColor = Color.FromArgb(246, 240, 230);
-            lbl_usuario.Location = new Point(2069, 11);
-            lbl_usuario.Margin = new Padding(4, 0, 4, 0);
+            lbl_usuario.Location = new Point(1655, 9);
             lbl_usuario.Name = "lbl_usuario";
-            lbl_usuario.Size = new Size(235, 45);
+            lbl_usuario.Size = new Size(201, 38);
             lbl_usuario.TabIndex = 4;
             lbl_usuario.Text = "Administrador";
             // 
             // pbc_user
             // 
             pbc_user.Image = Properties.Resources.ChatGPT_Image_5_jul_2026__01_51_17_p_m_;
-            pbc_user.Location = new Point(1989, 4);
-            pbc_user.Margin = new Padding(4, 4, 4, 4);
+            pbc_user.Location = new Point(1591, 3);
             pbc_user.Name = "pbc_user";
-            pbc_user.Size = new Size(72, 68);
+            pbc_user.Size = new Size(58, 54);
             pbc_user.SizeMode = PictureBoxSizeMode.StretchImage;
             pbc_user.TabIndex = 3;
             pbc_user.TabStop = false;
@@ -163,10 +157,9 @@
             // btn_menu
             // 
             btn_menu.Image = Properties.Resources.icono_menu;
-            btn_menu.Location = new Point(15, 0);
-            btn_menu.Margin = new Padding(4, 4, 4, 4);
+            btn_menu.Location = new Point(12, 0);
             btn_menu.Name = "btn_menu";
-            btn_menu.Size = new Size(69, 75);
+            btn_menu.Size = new Size(55, 60);
             btn_menu.SizeMode = PictureBoxSizeMode.StretchImage;
             btn_menu.TabIndex = 2;
             btn_menu.TabStop = false;
@@ -185,29 +178,26 @@
             pnl_menu.Controls.Add(pbc_salones);
             pnl_menu.Controls.Add(pnl_logo1);
             pnl_menu.Dock = DockStyle.Left;
-            pnl_menu.Location = new Point(0, 75);
-            pnl_menu.Margin = new Padding(4, 4, 4, 4);
+            pnl_menu.Location = new Point(0, 60);
             pnl_menu.Name = "pnl_menu";
-            pnl_menu.Size = new Size(312, 971);
+            pnl_menu.Size = new Size(250, 784);
             pnl_menu.TabIndex = 1;
             // 
             // pnl_consultas
             // 
             pnl_consultas.Controls.Add(pbc_reservas);
             pnl_consultas.Dock = DockStyle.Top;
-            pnl_consultas.Location = new Point(0, 917);
-            pnl_consultas.Margin = new Padding(4, 4, 4, 4);
+            pnl_consultas.Location = new Point(0, 736);
             pnl_consultas.Name = "pnl_consultas";
-            pnl_consultas.Size = new Size(312, 156);
+            pnl_consultas.Size = new Size(250, 125);
             pnl_consultas.TabIndex = 12;
             // 
             // pbc_reservas
             // 
             pbc_reservas.Image = Properties.Resources.img_reservas2;
-            pbc_reservas.Location = new Point(122, 0);
-            pbc_reservas.Margin = new Padding(4, 4, 4, 4);
+            pbc_reservas.Location = new Point(98, 0);
             pbc_reservas.Name = "pbc_reservas";
-            pbc_reservas.Size = new Size(186, 49);
+            pbc_reservas.Size = new Size(149, 39);
             pbc_reservas.SizeMode = PictureBoxSizeMode.StretchImage;
             pbc_reservas.TabIndex = 8;
             pbc_reservas.TabStop = false;
@@ -216,10 +206,9 @@
             // 
             pbc_consultas.Dock = DockStyle.Top;
             pbc_consultas.Image = Properties.Resources.img_consultas;
-            pbc_consultas.Location = new Point(0, 855);
-            pbc_consultas.Margin = new Padding(4, 4, 4, 4);
+            pbc_consultas.Location = new Point(0, 686);
             pbc_consultas.Name = "pbc_consultas";
-            pbc_consultas.Size = new Size(312, 62);
+            pbc_consultas.Size = new Size(250, 50);
             pbc_consultas.SizeMode = PictureBoxSizeMode.StretchImage;
             pbc_consultas.TabIndex = 11;
             pbc_consultas.TabStop = false;
@@ -231,19 +220,17 @@
             pnl_funciones.Controls.Add(pbc_equipos);
             pnl_funciones.Controls.Add(pbc_horarios);
             pnl_funciones.Dock = DockStyle.Top;
-            pnl_funciones.Location = new Point(0, 684);
-            pnl_funciones.Margin = new Padding(4, 4, 4, 4);
+            pnl_funciones.Location = new Point(0, 549);
             pnl_funciones.Name = "pnl_funciones";
-            pnl_funciones.Size = new Size(312, 171);
+            pnl_funciones.Size = new Size(250, 137);
             pnl_funciones.TabIndex = 10;
             // 
             // pbc_tiposalon
             // 
             pbc_tiposalon.Image = Properties.Resources.img_tiposalon;
-            pbc_tiposalon.Location = new Point(122, 112);
-            pbc_tiposalon.Margin = new Padding(4, 4, 4, 4);
+            pbc_tiposalon.Location = new Point(98, 90);
             pbc_tiposalon.Name = "pbc_tiposalon";
-            pbc_tiposalon.Size = new Size(186, 49);
+            pbc_tiposalon.Size = new Size(149, 39);
             pbc_tiposalon.SizeMode = PictureBoxSizeMode.StretchImage;
             pbc_tiposalon.TabIndex = 8;
             pbc_tiposalon.TabStop = false;
@@ -251,10 +238,9 @@
             // pbc_equipos
             // 
             pbc_equipos.Image = Properties.Resources.img;
-            pbc_equipos.Location = new Point(122, 0);
-            pbc_equipos.Margin = new Padding(4, 4, 4, 4);
+            pbc_equipos.Location = new Point(98, 0);
             pbc_equipos.Name = "pbc_equipos";
-            pbc_equipos.Size = new Size(186, 49);
+            pbc_equipos.Size = new Size(149, 39);
             pbc_equipos.SizeMode = PictureBoxSizeMode.StretchImage;
             pbc_equipos.TabIndex = 6;
             pbc_equipos.TabStop = false;
@@ -262,10 +248,9 @@
             // pbc_horarios
             // 
             pbc_horarios.Image = Properties.Resources.img_horarios1;
-            pbc_horarios.Location = new Point(122, 56);
-            pbc_horarios.Margin = new Padding(4, 4, 4, 4);
+            pbc_horarios.Location = new Point(98, 45);
             pbc_horarios.Name = "pbc_horarios";
-            pbc_horarios.Size = new Size(186, 49);
+            pbc_horarios.Size = new Size(149, 39);
             pbc_horarios.SizeMode = PictureBoxSizeMode.StretchImage;
             pbc_horarios.TabIndex = 7;
             pbc_horarios.TabStop = false;
@@ -275,10 +260,9 @@
             // 
             pbc_funciones.Dock = DockStyle.Top;
             pbc_funciones.Image = Properties.Resources.img_funciones;
-            pbc_funciones.Location = new Point(0, 622);
-            pbc_funciones.Margin = new Padding(4, 4, 4, 4);
+            pbc_funciones.Location = new Point(0, 499);
             pbc_funciones.Name = "pbc_funciones";
-            pbc_funciones.Size = new Size(312, 62);
+            pbc_funciones.Size = new Size(250, 50);
             pbc_funciones.SizeMode = PictureBoxSizeMode.StretchImage;
             pbc_funciones.TabIndex = 9;
             pbc_funciones.TabStop = false;
@@ -290,19 +274,17 @@
             pnl_trabajadores.Controls.Add(pbcTrabajadores_eliminar);
             pnl_trabajadores.Controls.Add(pbcTrabajadores_agregar);
             pnl_trabajadores.Dock = DockStyle.Top;
-            pnl_trabajadores.Location = new Point(0, 451);
-            pnl_trabajadores.Margin = new Padding(4, 4, 4, 4);
+            pnl_trabajadores.Location = new Point(0, 362);
             pnl_trabajadores.Name = "pnl_trabajadores";
-            pnl_trabajadores.Size = new Size(312, 171);
+            pnl_trabajadores.Size = new Size(250, 137);
             pnl_trabajadores.TabIndex = 8;
             // 
             // pbcTrabajadores_modificar
             // 
             pbcTrabajadores_modificar.Image = Properties.Resources.boton_modificar;
-            pbcTrabajadores_modificar.Location = new Point(122, 120);
-            pbcTrabajadores_modificar.Margin = new Padding(4, 4, 4, 4);
+            pbcTrabajadores_modificar.Location = new Point(98, 96);
             pbcTrabajadores_modificar.Name = "pbcTrabajadores_modificar";
-            pbcTrabajadores_modificar.Size = new Size(186, 49);
+            pbcTrabajadores_modificar.Size = new Size(149, 39);
             pbcTrabajadores_modificar.SizeMode = PictureBoxSizeMode.StretchImage;
             pbcTrabajadores_modificar.TabIndex = 5;
             pbcTrabajadores_modificar.TabStop = false;
@@ -310,10 +292,9 @@
             // pbcTrabajadores_eliminar
             // 
             pbcTrabajadores_eliminar.Image = Properties.Resources.boton_eliminar;
-            pbcTrabajadores_eliminar.Location = new Point(122, 64);
-            pbcTrabajadores_eliminar.Margin = new Padding(4, 4, 4, 4);
+            pbcTrabajadores_eliminar.Location = new Point(98, 51);
             pbcTrabajadores_eliminar.Name = "pbcTrabajadores_eliminar";
-            pbcTrabajadores_eliminar.Size = new Size(186, 49);
+            pbcTrabajadores_eliminar.Size = new Size(149, 39);
             pbcTrabajadores_eliminar.SizeMode = PictureBoxSizeMode.StretchImage;
             pbcTrabajadores_eliminar.TabIndex = 4;
             pbcTrabajadores_eliminar.TabStop = false;
@@ -321,10 +302,9 @@
             // pbcTrabajadores_agregar
             // 
             pbcTrabajadores_agregar.Image = Properties.Resources.boton_agregar;
-            pbcTrabajadores_agregar.Location = new Point(122, 8);
-            pbcTrabajadores_agregar.Margin = new Padding(4, 4, 4, 4);
+            pbcTrabajadores_agregar.Location = new Point(98, 6);
             pbcTrabajadores_agregar.Name = "pbcTrabajadores_agregar";
-            pbcTrabajadores_agregar.Size = new Size(186, 49);
+            pbcTrabajadores_agregar.Size = new Size(149, 39);
             pbcTrabajadores_agregar.SizeMode = PictureBoxSizeMode.StretchImage;
             pbcTrabajadores_agregar.TabIndex = 3;
             pbcTrabajadores_agregar.TabStop = false;
@@ -333,10 +313,9 @@
             // 
             pbc_trabajadores.Dock = DockStyle.Top;
             pbc_trabajadores.Image = Properties.Resources.img_trabajadores;
-            pbc_trabajadores.Location = new Point(0, 389);
-            pbc_trabajadores.Margin = new Padding(4, 4, 4, 4);
+            pbc_trabajadores.Location = new Point(0, 312);
             pbc_trabajadores.Name = "pbc_trabajadores";
-            pbc_trabajadores.Size = new Size(312, 62);
+            pbc_trabajadores.Size = new Size(250, 50);
             pbc_trabajadores.SizeMode = PictureBoxSizeMode.StretchImage;
             pbc_trabajadores.TabIndex = 7;
             pbc_trabajadores.TabStop = false;
@@ -348,53 +327,51 @@
             pnl_salones.Controls.Add(pbc_Saloneseliminar);
             pnl_salones.Controls.Add(pbc_Salonesagregar);
             pnl_salones.Dock = DockStyle.Top;
-            pnl_salones.Location = new Point(0, 218);
-            pnl_salones.Margin = new Padding(4, 4, 4, 4);
+            pnl_salones.Location = new Point(0, 175);
             pnl_salones.Name = "pnl_salones";
-            pnl_salones.Size = new Size(312, 171);
+            pnl_salones.Size = new Size(250, 137);
             pnl_salones.TabIndex = 4;
             // 
             // pbcSalones_modificar
             // 
             pbcSalones_modificar.Image = Properties.Resources.boton_modificar;
-            pbcSalones_modificar.Location = new Point(122, 112);
-            pbcSalones_modificar.Margin = new Padding(4, 4, 4, 4);
+            pbcSalones_modificar.Location = new Point(98, 90);
             pbcSalones_modificar.Name = "pbcSalones_modificar";
-            pbcSalones_modificar.Size = new Size(186, 49);
+            pbcSalones_modificar.Size = new Size(149, 39);
             pbcSalones_modificar.SizeMode = PictureBoxSizeMode.StretchImage;
             pbcSalones_modificar.TabIndex = 2;
             pbcSalones_modificar.TabStop = false;
+            pbcSalones_modificar.Click += pbcSalones_modificar_Click;
             // 
             // pbc_Saloneseliminar
             // 
             pbc_Saloneseliminar.Image = Properties.Resources.boton_eliminar;
-            pbc_Saloneseliminar.Location = new Point(122, 56);
-            pbc_Saloneseliminar.Margin = new Padding(4, 4, 4, 4);
+            pbc_Saloneseliminar.Location = new Point(98, 45);
             pbc_Saloneseliminar.Name = "pbc_Saloneseliminar";
-            pbc_Saloneseliminar.Size = new Size(186, 49);
+            pbc_Saloneseliminar.Size = new Size(149, 39);
             pbc_Saloneseliminar.SizeMode = PictureBoxSizeMode.StretchImage;
             pbc_Saloneseliminar.TabIndex = 1;
             pbc_Saloneseliminar.TabStop = false;
+            pbc_Saloneseliminar.Click += pbc_Saloneseliminar_Click;
             // 
             // pbc_Salonesagregar
             // 
             pbc_Salonesagregar.Image = Properties.Resources.boton_agregar;
-            pbc_Salonesagregar.Location = new Point(122, 4);
-            pbc_Salonesagregar.Margin = new Padding(4, 4, 4, 4);
+            pbc_Salonesagregar.Location = new Point(98, 3);
             pbc_Salonesagregar.Name = "pbc_Salonesagregar";
-            pbc_Salonesagregar.Size = new Size(186, 49);
+            pbc_Salonesagregar.Size = new Size(149, 39);
             pbc_Salonesagregar.SizeMode = PictureBoxSizeMode.StretchImage;
             pbc_Salonesagregar.TabIndex = 0;
             pbc_Salonesagregar.TabStop = false;
+            pbc_Salonesagregar.Click += pbc_Salonesagregar_Click;
             // 
             // pbc_salones
             // 
             pbc_salones.Dock = DockStyle.Top;
             pbc_salones.Image = Properties.Resources.img_salas;
-            pbc_salones.Location = new Point(0, 156);
-            pbc_salones.Margin = new Padding(4, 4, 4, 4);
+            pbc_salones.Location = new Point(0, 125);
             pbc_salones.Name = "pbc_salones";
-            pbc_salones.Size = new Size(312, 62);
+            pbc_salones.Size = new Size(250, 50);
             pbc_salones.SizeMode = PictureBoxSizeMode.StretchImage;
             pbc_salones.TabIndex = 3;
             pbc_salones.TabStop = false;
@@ -405,18 +382,16 @@
             pnl_logo1.Controls.Add(pbc_logo);
             pnl_logo1.Dock = DockStyle.Top;
             pnl_logo1.Location = new Point(0, 0);
-            pnl_logo1.Margin = new Padding(4, 4, 4, 4);
             pnl_logo1.Name = "pnl_logo1";
-            pnl_logo1.Size = new Size(312, 156);
+            pnl_logo1.Size = new Size(250, 125);
             pnl_logo1.TabIndex = 2;
             // 
             // pbc_logo
             // 
             pbc_logo.Image = Properties.Resources.lg_services;
-            pbc_logo.Location = new Point(74, 8);
-            pbc_logo.Margin = new Padding(4, 4, 4, 4);
+            pbc_logo.Location = new Point(59, 6);
             pbc_logo.Name = "pbc_logo";
-            pbc_logo.Size = new Size(150, 150);
+            pbc_logo.Size = new Size(120, 120);
             pbc_logo.SizeMode = PictureBoxSizeMode.StretchImage;
             pbc_logo.TabIndex = 0;
             pbc_logo.TabStop = false;
@@ -425,10 +400,9 @@
             // 
             pbc_cerrarsesion.BackColor = Color.FromArgb(92, 64, 51);
             pbc_cerrarsesion.Image = Properties.Resources.img_elisesion;
-            pbc_cerrarsesion.Location = new Point(1989, 75);
-            pbc_cerrarsesion.Margin = new Padding(4, 4, 4, 4);
+            pbc_cerrarsesion.Location = new Point(1591, 60);
             pbc_cerrarsesion.Name = "pbc_cerrarsesion";
-            pbc_cerrarsesion.Size = new Size(396, 55);
+            pbc_cerrarsesion.Size = new Size(317, 44);
             pbc_cerrarsesion.SizeMode = PictureBoxSizeMode.Zoom;
             pbc_cerrarsesion.TabIndex = 3;
             pbc_cerrarsesion.TabStop = false;
@@ -438,24 +412,22 @@
             // pnl_fromularios
             // 
             pnl_fromularios.BackColor = Color.White;
-            pnl_fromularios.Location = new Point(320, 138);
-            pnl_fromularios.Margin = new Padding(4, 4, 4, 4);
+            pnl_fromularios.Location = new Point(256, 110);
             pnl_fromularios.Name = "pnl_fromularios";
-            pnl_fromularios.Size = new Size(1652, 835);
+            pnl_fromularios.Size = new Size(1609, 811);
             pnl_fromularios.TabIndex = 4;
             // 
             // frm_administrador
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(246, 240, 230);
-            ClientSize = new Size(1916, 1046);
+            ClientSize = new Size(1539, 844);
             Controls.Add(pnl_fromularios);
             Controls.Add(pbc_cerrarsesion);
             Controls.Add(pnl_menu);
             Controls.Add(pnl_superior);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 4, 4, 4);
             Name = "frm_administrador";
             StartPosition = FormStartPosition.CenterScreen;
             Text = " ";

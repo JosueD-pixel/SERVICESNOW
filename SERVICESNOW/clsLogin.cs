@@ -33,18 +33,18 @@ namespace SERVICESNOW
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT idRol FROM trabajadores " +
-                                 "WHERE claveTrabajador = @claveTrabajador AND contrasena = @contrasena;";
+                    string sql = "SELECT id_rol FROM tbl_trabajadores " +
+                                 "WHERE clave_trabajador = @clave_trabajador AND contrasena = @contrasena;";
                     using (var consulta = new MySqlCommand(sql, conexion))
                     {
-                        consulta.Parameters.AddWithValue("@claveTrabajador", matricula);
+                        consulta.Parameters.AddWithValue("@clave_trabajador", matricula);
                         consulta.Parameters.AddWithValue("@contrasena", password);
 
                         using (var resultado = consulta.ExecuteReader())
                         {
                             if (resultado.Read())
                             {
-                                 rol = resultado.GetInt32("idRol");
+                                 rol = resultado.GetInt32("id_rol");
 
                                 nombreRol = rol switch
                                 {
@@ -88,7 +88,7 @@ namespace SERVICESNOW
                     esRecepcionista = true;
                     esTrabajador = false;
                     break;
-                case "Trabajador ":
+                case "Trabajador":
                     esAdministrador = false;
                     esRecepcionista = false;
                     esTrabajador = true;

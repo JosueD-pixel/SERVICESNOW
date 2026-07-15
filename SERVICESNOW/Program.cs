@@ -19,7 +19,7 @@ namespace SERVICESNOW
 
 
 
-            Application.Run(new frmFuncionesEquipos());
+            Application.Run(new frm_inicio());
         }
     }
 } 

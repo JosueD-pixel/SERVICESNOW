@@ -153,6 +153,16 @@ namespace SERVICESNOW.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btn_guardar {
+            get {
+                object obj = ResourceManager.GetObject("btn_guardar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btn_ingresar {
             get {
                 object obj = ResourceManager.GetObject("btn_ingresar", resourceCulture);
@@ -166,6 +176,16 @@ namespace SERVICESNOW.Properties {
         internal static System.Drawing.Bitmap btn_ingresar_aceptado {
             get {
                 object obj = ResourceManager.GetObject("btn_ingresar_aceptado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_limpiar {
+            get {
+                object obj = ResourceManager.GetObject("btn_limpiar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,16 +223,6 @@ namespace SERVICESNOW.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap equipos {
-            get {
-                object obj = ResourceManager.GetObject("equipos", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap fondo_login {
             get {
                 object obj = ResourceManager.GetObject("fondo_login", resourceCulture);
@@ -226,6 +236,16 @@ namespace SERVICESNOW.Properties {
         internal static System.Drawing.Bitmap frm_imglogin {
             get {
                 object obj = ResourceManager.GetObject("frm_imglogin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icn_grupo {
+            get {
+                object obj = ResourceManager.GetObject("icn_grupo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
