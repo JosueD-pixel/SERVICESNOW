@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             pnl_superior = new Panel();
-            pnl_tabla = new Panel();
+            label2 = new Label();
             pictureBox4 = new PictureBox();
+            pnl_tabla = new Panel();
+            textBox1 = new TextBox();
+            btn_eliminar = new PictureBox();
+            dataGridView1 = new DataGridView();
             pictureBox1 = new PictureBox();
             label1 = new Label();
-            label2 = new Label();
-            dataGridView1 = new DataGridView();
-            btn_eliminar = new PictureBox();
-            textBox1 = new TextBox();
             pnl_superior.SuspendLayout();
-            pnl_tabla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            pnl_tabla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btn_eliminar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pnl_superior
@@ -56,16 +56,18 @@
             pnl_superior.Size = new Size(1432, 60);
             pnl_superior.TabIndex = 0;
             // 
-            // pnl_tabla
+            // label2
             // 
-            pnl_tabla.BackColor = Color.FromArgb(246, 240, 232);
-            pnl_tabla.Controls.Add(textBox1);
-            pnl_tabla.Controls.Add(btn_eliminar);
-            pnl_tabla.Controls.Add(dataGridView1);
-            pnl_tabla.Location = new Point(37, 124);
-            pnl_tabla.Name = "pnl_tabla";
-            pnl_tabla.Size = new Size(1371, 454);
-            pnl_tabla.TabIndex = 2;
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(578, 9);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(249, 41);
+            label2.TabIndex = 13;
+            label2.Text = "TRABAJADORES";
             // 
             // pictureBox4
             // 
@@ -77,6 +79,45 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 10;
             pictureBox4.TabStop = false;
+            // 
+            // pnl_tabla
+            // 
+            pnl_tabla.BackColor = Color.FromArgb(246, 240, 232);
+            pnl_tabla.Controls.Add(textBox1);
+            pnl_tabla.Controls.Add(btn_eliminar);
+            pnl_tabla.Controls.Add(dataGridView1);
+            pnl_tabla.Location = new Point(37, 124);
+            pnl_tabla.Name = "pnl_tabla";
+            pnl_tabla.Size = new Size(1371, 454);
+            pnl_tabla.TabIndex = 2;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(1139, 43);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(205, 27);
+            textBox1.TabIndex = 14;
+            // 
+            // btn_eliminar
+            // 
+            btn_eliminar.BackColor = Color.FromArgb(92, 64, 51);
+            btn_eliminar.Image = Properties.Resources.boton_eliminar;
+            btn_eliminar.Location = new Point(1139, 376);
+            btn_eliminar.Margin = new Padding(2);
+            btn_eliminar.Name = "btn_eliminar";
+            btn_eliminar.Size = new Size(210, 56);
+            btn_eliminar.SizeMode = PictureBoxSizeMode.StretchImage;
+            btn_eliminar.TabIndex = 13;
+            btn_eliminar.TabStop = false;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(24, 76);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(1325, 281);
+            dataGridView1.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -102,47 +143,6 @@
             label1.TabIndex = 12;
             label1.Text = "Eliminar trabajador";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(578, 9);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(249, 41);
-            label2.TabIndex = 13;
-            label2.Text = "TRABAJADORES";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(24, 76);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1325, 281);
-            dataGridView1.TabIndex = 0;
-            // 
-            // btn_eliminar
-            // 
-            btn_eliminar.BackColor = Color.FromArgb(92, 64, 51);
-            btn_eliminar.Image = Properties.Resources.boton_eliminar;
-            btn_eliminar.Location = new Point(1139, 376);
-            btn_eliminar.Margin = new Padding(2);
-            btn_eliminar.Name = "btn_eliminar";
-            btn_eliminar.Size = new Size(210, 56);
-            btn_eliminar.SizeMode = PictureBoxSizeMode.StretchImage;
-            btn_eliminar.TabIndex = 13;
-            btn_eliminar.TabStop = false;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(1139, 43);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(205, 27);
-            textBox1.TabIndex = 14;
-            // 
             // frm_trabjadores_ELIMINAR
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -157,12 +157,12 @@
             Text = "frm_trabjadores_ELIMINAR";
             pnl_superior.ResumeLayout(false);
             pnl_superior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             pnl_tabla.ResumeLayout(false);
             pnl_tabla.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)btn_eliminar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
