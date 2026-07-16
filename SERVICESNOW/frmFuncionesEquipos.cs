@@ -156,11 +156,6 @@ namespace SERVICESNOW
                 // Limpiar campos y CheckBox
                 equipos.LimpiarPanel(pnlEquipos);
 
-                // Regresar al modo guardar
-                idEquipo = 0;
-                txtID.Clear();
-                btnGuardar.Text = "Guardar";
-
                 // Deseleccionar tabla
                 dgvEquipos.ClearSelection();
                 dgvEquipos.CurrentCell = null;
@@ -275,9 +270,6 @@ namespace SERVICESNOW
                 chkProyector.Checked = Convert.ToBoolean(fila.Cells["Proyector"].Value);
 
                 chkRed.Checked = Convert.ToBoolean(fila.Cells["Red"].Value);
-
-                // Cambiar el texto para indicar que se actualizará
-                btnGuardar.Text = "Actualizar";
 
                 txtNombreEquipamiento.Focus();
             }

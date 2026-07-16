@@ -97,7 +97,7 @@ namespace SERVICESNOW
 
             return tabla;
         }
-
+       
         public void LimpiarPanel(Panel panelDestino)
         {
             foreach (Control control in panelDestino.Controls)
