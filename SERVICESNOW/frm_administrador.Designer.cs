@@ -97,9 +97,8 @@
             pnl_superior.Dock = DockStyle.Top;
             pnl_superior.Location = new Point(0, 0);
             pnl_superior.Name = "pnl_superior";
-            pnl_superior.Size = new Size(1539, 60);
+            pnl_superior.Size = new Size(1720, 60);
             pnl_superior.TabIndex = 0;
-            pnl_superior.Paint += pnl_superior_Paint;
             // 
             // pnl_logo
             // 
@@ -123,7 +122,7 @@
             // pbc_boton
             // 
             pbc_boton.Image = Properties.Resources.icn_userbajo;
-            pbc_boton.Location = new Point(1850, 6);
+            pbc_boton.Location = new Point(1637, 3);
             pbc_boton.Name = "pbc_boton";
             pbc_boton.Size = new Size(58, 54);
             pbc_boton.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -137,7 +136,7 @@
             lbl_usuario.BackColor = Color.FromArgb(92, 64, 51);
             lbl_usuario.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             lbl_usuario.ForeColor = Color.FromArgb(246, 240, 230);
-            lbl_usuario.Location = new Point(1655, 9);
+            lbl_usuario.Location = new Point(1434, 9);
             lbl_usuario.Name = "lbl_usuario";
             lbl_usuario.Size = new Size(201, 38);
             lbl_usuario.TabIndex = 4;
@@ -146,7 +145,7 @@
             // pbc_user
             // 
             pbc_user.Image = Properties.Resources.ChatGPT_Image_5_jul_2026__01_51_17_p_m_;
-            pbc_user.Location = new Point(1591, 3);
+            pbc_user.Location = new Point(1370, 3);
             pbc_user.Name = "pbc_user";
             pbc_user.Size = new Size(58, 54);
             pbc_user.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -222,16 +221,6 @@
             pnl_funciones.Name = "pnl_funciones";
             pnl_funciones.Size = new Size(250, 137);
             pnl_funciones.TabIndex = 10;
-            // 
-            // pbc_tiposalon
-            // 
-            pbc_tiposalon.Image = Properties.Resources.img_tiposalon;
-            pbc_tiposalon.Location = new Point(98, 90);
-            pbc_tiposalon.Name = "pbc_tiposalon";
-            pbc_tiposalon.Size = new Size(149, 39);
-            pbc_tiposalon.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbc_tiposalon.TabIndex = 8;
-            pbc_tiposalon.TabStop = false;
             // 
             // pbc_equipos
             // 
@@ -399,7 +388,7 @@
             // 
             pbc_cerrarsesion.BackColor = Color.FromArgb(92, 64, 51);
             pbc_cerrarsesion.Image = Properties.Resources.img_elisesion;
-            pbc_cerrarsesion.Location = new Point(1591, 60);
+            pbc_cerrarsesion.Location = new Point(1370, 57);
             pbc_cerrarsesion.Name = "pbc_cerrarsesion";
             pbc_cerrarsesion.Size = new Size(317, 44);
             pbc_cerrarsesion.SizeMode = PictureBoxSizeMode.Zoom;
@@ -411,9 +400,9 @@
             // pnl_fromularios
             // 
             pnl_fromularios.BackColor = Color.White;
-            pnl_fromularios.Location = new Point(256, 110);
+            pnl_fromularios.Location = new Point(256, 107);
             pnl_fromularios.Name = "pnl_fromularios";
-            pnl_fromularios.Size = new Size(1609, 811);
+            pnl_fromularios.Size = new Size(1450, 639);
             pnl_fromularios.TabIndex = 4;
             // 
             // frm_administrador
@@ -421,7 +410,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(246, 240, 230);
-            ClientSize = new Size(1539, 844);
+            ClientSize = new Size(1720, 844);
             Controls.Add(pnl_fromularios);
             Controls.Add(pbc_cerrarsesion);
             Controls.Add(pnl_menu);
