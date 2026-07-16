@@ -52,7 +52,7 @@ namespace SERVICESNOW
                 MessageBox.Show(ex.Message);
             }
         }
-
+       
         private void txt_buscar_TextChanged(object sender, EventArgs e)
         {
             horarios = new cls_horarios();
@@ -261,6 +261,7 @@ namespace SERVICESNOW
                 idHorario = Convert.ToInt32(fila.Cells["Clave"].Value);
 
                 // Mostrar los datos en los controles
+                txtID.Text = fila.Cells["Clave"].Value.ToString();
 
                 cmb_horaInicio.Text = fila.Cells["Hora de inicio"].Value.ToString();
 
@@ -278,6 +279,16 @@ namespace SERVICESNOW
                     MessageBoxIcon.Error
                 );
             }
+        }
+
+        private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+            idHorario=0;
+            horarios.LimpiarPanel(pn_formulario);
+            cmb_horaInicio.SelectedIndex = -1;
+            cmb_horafinal.SelectedIndex = -1;
+            dgv_horarios.ClearSelection();
+            dgv_horarios.CurrentCell = null;
         }
     }
 }

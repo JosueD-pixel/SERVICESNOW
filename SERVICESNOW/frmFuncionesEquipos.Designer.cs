@@ -96,10 +96,10 @@
             // 
             // pictureBox1
             // 
-            
+            pictureBox1.Image = Properties.Resources.equipos;
             pictureBox1.Location = new Point(754, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(65, 57);
+            pictureBox1.Size = new Size(70, 65);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
@@ -138,14 +138,14 @@
             // btnLimpiar
             // 
             btnLimpiar.BackColor = Color.FromArgb(92, 64, 51);
+            btnLimpiar.BackgroundImage = Properties.Resources.btn_limpiar;
             btnLimpiar.BackgroundImageLayout = ImageLayout.Zoom;
             btnLimpiar.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnLimpiar.ForeColor = Color.White;
-            btnLimpiar.Location = new Point(298, 392);
+            btnLimpiar.Location = new Point(298, 403);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(192, 68);
             btnLimpiar.TabIndex = 16;
-            btnLimpiar.Text = "Limpiar";
             btnLimpiar.UseVisualStyleBackColor = false;
             btnLimpiar.Click += btnLimpiar_Click;
             // 
@@ -270,14 +270,14 @@
             // btnModificar
             // 
             btnModificar.BackColor = Color.FromArgb(92, 64, 51);
+            btnModificar.BackgroundImage = Properties.Resources.boton_modificar;
             btnModificar.BackgroundImageLayout = ImageLayout.Zoom;
             btnModificar.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnModificar.ForeColor = Color.WhiteSmoke;
-            btnModificar.Location = new Point(48, 403);
+            btnModificar.Location = new Point(275, 403);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(192, 68);
             btnModificar.TabIndex = 16;
-            btnModificar.Text = "Modificar";
             btnModificar.UseVisualStyleBackColor = false;
             btnModificar.Click += btnModificar_Click;
             // 
@@ -325,9 +325,11 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dgvEquipos.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvEquipos.EnableHeadersVisualStyles = false;
             dgvEquipos.Location = new Point(18, 112);
             dgvEquipos.MultiSelect = false;
             dgvEquipos.Name = "dgvEquipos";
+            dgvEquipos.ReadOnly = true;
             dgvEquipos.RowHeadersVisible = false;
             dgvEquipos.RowHeadersWidth = 51;
             dgvEquipos.RowTemplate.Height = 32;
@@ -337,20 +339,21 @@
             // btnGuardar
             // 
             btnGuardar.BackColor = Color.FromArgb(92, 64, 51);
+            btnGuardar.BackgroundImage = Properties.Resources.btn_guardar;
             btnGuardar.BackgroundImageLayout = ImageLayout.Zoom;
             btnGuardar.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnGuardar.ForeColor = Color.WhiteSmoke;
-            btnGuardar.Location = new Point(274, 403);
+            btnGuardar.Location = new Point(48, 403);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(192, 68);
             btnGuardar.TabIndex = 15;
-            btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = false;
             btnGuardar.Click += btnGuardar_Click;
             // 
             // btnEliminar
             // 
             btnEliminar.BackColor = Color.FromArgb(92, 64, 51);
+            btnEliminar.BackgroundImage = Properties.Resources.boton_eliminar;
             btnEliminar.BackgroundImageLayout = ImageLayout.Zoom;
             btnEliminar.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEliminar.ForeColor = Color.White;
@@ -358,7 +361,6 @@
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(192, 68);
             btnEliminar.TabIndex = 14;
-            btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
             btnEliminar.Click += btnEliminar_Click;
             // 
