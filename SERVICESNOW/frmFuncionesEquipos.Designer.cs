@@ -132,7 +132,7 @@
             pnlEquipos.Controls.Add(label1);
             pnlEquipos.Location = new Point(29, 100);
             pnlEquipos.Name = "pnlEquipos";
-            pnlEquipos.Size = new Size(509, 480);
+            pnlEquipos.Size = new Size(509, 625);
             pnlEquipos.TabIndex = 0;
             // 
             // btnLimpiar
@@ -142,7 +142,7 @@
             btnLimpiar.BackgroundImageLayout = ImageLayout.Zoom;
             btnLimpiar.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnLimpiar.ForeColor = Color.White;
-            btnLimpiar.Location = new Point(298, 403);
+            btnLimpiar.Location = new Point(296, 533);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(192, 68);
             btnLimpiar.TabIndex = 16;
@@ -193,7 +193,7 @@
             // 
             chkProyector.AutoSize = true;
             chkProyector.Font = new Font("Segoe UI", 12F);
-            chkProyector.Location = new Point(298, 284);
+            chkProyector.Location = new Point(38, 439);
             chkProyector.Name = "chkProyector";
             chkProyector.Size = new Size(119, 32);
             chkProyector.TabIndex = 5;
@@ -204,7 +204,7 @@
             // 
             chkPantalla.AutoSize = true;
             chkPantalla.Font = new Font("Segoe UI", 12F);
-            chkPantalla.Location = new Point(298, 336);
+            chkPantalla.Location = new Point(38, 491);
             chkPantalla.Name = "chkPantalla";
             chkPantalla.Size = new Size(102, 32);
             chkPantalla.TabIndex = 6;
@@ -264,7 +264,7 @@
             panel1.Controls.Add(label9);
             panel1.Location = new Point(553, 100);
             panel1.Name = "panel1";
-            panel1.Size = new Size(867, 480);
+            panel1.Size = new Size(867, 625);
             panel1.TabIndex = 11;
             // 
             // btnModificar
@@ -274,7 +274,7 @@
             btnModificar.BackgroundImageLayout = ImageLayout.Zoom;
             btnModificar.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnModificar.ForeColor = Color.WhiteSmoke;
-            btnModificar.Location = new Point(275, 403);
+            btnModificar.Location = new Point(284, 533);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(192, 68);
             btnModificar.TabIndex = 16;
@@ -285,7 +285,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(591, 16);
+            label8.Location = new Point(600, 28);
             label8.Name = "label8";
             label8.Size = new Size(255, 28);
             label8.TabIndex = 11;
@@ -294,7 +294,7 @@
             // txtNombreEquipos
             // 
             txtNombreEquipos.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombreEquipos.Location = new Point(597, 57);
+            txtNombreEquipos.Location = new Point(606, 69);
             txtNombreEquipos.Name = "txtNombreEquipos";
             txtNombreEquipos.Size = new Size(249, 34);
             txtNombreEquipos.TabIndex = 11;
@@ -326,14 +326,14 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dgvEquipos.DefaultCellStyle = dataGridViewCellStyle2;
             dgvEquipos.EnableHeadersVisualStyles = false;
-            dgvEquipos.Location = new Point(18, 112);
+            dgvEquipos.Location = new Point(27, 125);
             dgvEquipos.MultiSelect = false;
             dgvEquipos.Name = "dgvEquipos";
             dgvEquipos.ReadOnly = true;
             dgvEquipos.RowHeadersVisible = false;
             dgvEquipos.RowHeadersWidth = 51;
             dgvEquipos.RowTemplate.Height = 32;
-            dgvEquipos.Size = new Size(828, 243);
+            dgvEquipos.Size = new Size(828, 386);
             dgvEquipos.TabIndex = 12;
             // 
             // btnGuardar
@@ -343,7 +343,7 @@
             btnGuardar.BackgroundImageLayout = ImageLayout.Zoom;
             btnGuardar.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnGuardar.ForeColor = Color.WhiteSmoke;
-            btnGuardar.Location = new Point(48, 403);
+            btnGuardar.Location = new Point(48, 533);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(192, 68);
             btnGuardar.TabIndex = 15;
@@ -357,7 +357,7 @@
             btnEliminar.BackgroundImageLayout = ImageLayout.Zoom;
             btnEliminar.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(502, 403);
+            btnEliminar.Location = new Point(508, 533);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(192, 68);
             btnEliminar.TabIndex = 14;
@@ -388,7 +388,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 251, 245);
-            ClientSize = new Size(1432, 592);
+            ClientSize = new Size(1432, 853);
             Controls.Add(panel1);
             Controls.Add(pnlSuperior);
             Controls.Add(pnlEquipos);
