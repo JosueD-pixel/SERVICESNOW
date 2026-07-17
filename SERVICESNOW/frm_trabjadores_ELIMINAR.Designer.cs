@@ -32,16 +32,16 @@
             label2 = new Label();
             pictureBox4 = new PictureBox();
             pnl_tabla = new Panel();
-            textBox1 = new TextBox();
+            txt_buscar = new TextBox();
             btn_eliminar = new PictureBox();
-            dataGridView1 = new DataGridView();
+            dgv_Trabajadores = new DataGridView();
             pictureBox1 = new PictureBox();
             label1 = new Label();
             pnl_superior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             pnl_tabla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btn_eliminar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Trabajadores).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -83,20 +83,21 @@
             // pnl_tabla
             // 
             pnl_tabla.BackColor = Color.FromArgb(246, 240, 232);
-            pnl_tabla.Controls.Add(textBox1);
+            pnl_tabla.Controls.Add(txt_buscar);
             pnl_tabla.Controls.Add(btn_eliminar);
-            pnl_tabla.Controls.Add(dataGridView1);
+            pnl_tabla.Controls.Add(dgv_Trabajadores);
             pnl_tabla.Location = new Point(37, 124);
             pnl_tabla.Name = "pnl_tabla";
             pnl_tabla.Size = new Size(1371, 454);
             pnl_tabla.TabIndex = 2;
             // 
-            // textBox1
+            // txt_buscar
             // 
-            textBox1.Location = new Point(1139, 43);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(205, 27);
-            textBox1.TabIndex = 14;
+            txt_buscar.Location = new Point(1139, 43);
+            txt_buscar.Name = "txt_buscar";
+            txt_buscar.Size = new Size(205, 27);
+            txt_buscar.TabIndex = 14;
+            txt_buscar.TextChanged += txt_buscar_TextChanged;
             // 
             // btn_eliminar
             // 
@@ -109,15 +110,16 @@
             btn_eliminar.SizeMode = PictureBoxSizeMode.StretchImage;
             btn_eliminar.TabIndex = 13;
             btn_eliminar.TabStop = false;
+            btn_eliminar.Click += btn_eliminar_Click;
             // 
-            // dataGridView1
+            // dgv_Trabajadores
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(24, 76);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1325, 281);
-            dataGridView1.TabIndex = 0;
+            dgv_Trabajadores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_Trabajadores.Location = new Point(24, 76);
+            dgv_Trabajadores.Name = "dgv_Trabajadores";
+            dgv_Trabajadores.RowHeadersWidth = 51;
+            dgv_Trabajadores.Size = new Size(1325, 281);
+            dgv_Trabajadores.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -155,13 +157,14 @@
             Controls.Add(pnl_superior);
             Name = "frm_trabjadores_ELIMINAR";
             Text = "frm_trabjadores_ELIMINAR";
+            Load += frm_trabjadores_ELIMINAR_Load;
             pnl_superior.ResumeLayout(false);
             pnl_superior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             pnl_tabla.ResumeLayout(false);
             pnl_tabla.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btn_eliminar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Trabajadores).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -175,8 +178,8 @@
         private PictureBox pictureBox1;
         private Label label2;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txt_buscar;
         private PictureBox btn_eliminar;
-        private DataGridView dataGridView1;
+        private DataGridView dgv_Trabajadores;
     }
 }

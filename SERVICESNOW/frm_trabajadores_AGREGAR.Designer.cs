@@ -64,6 +64,7 @@
             pictureBox2 = new PictureBox();
             btn_guardar = new PictureBox();
             btn_limpiar = new PictureBox();
+            btn_agregarol = new PictureBox();
             pnl_superior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             pnl_datospersonales.SuspendLayout();
@@ -72,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btn_guardar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btn_limpiar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btn_agregarol).BeginInit();
             SuspendLayout();
             // 
             // pnl_superior
@@ -311,6 +313,7 @@
             // pnl_datoslaborales
             // 
             pnl_datoslaborales.BackColor = Color.FromArgb(246, 240, 232);
+            pnl_datoslaborales.Controls.Add(btn_agregarol);
             pnl_datoslaborales.Controls.Add(txt_contrasena);
             pnl_datoslaborales.Controls.Add(cmb_estado);
             pnl_datoslaborales.Controls.Add(cmb_roles);
@@ -324,12 +327,12 @@
             pnl_datoslaborales.Controls.Add(label4);
             pnl_datoslaborales.Location = new Point(467, 136);
             pnl_datoslaborales.Name = "pnl_datoslaborales";
-            pnl_datoslaborales.Size = new Size(423, 444);
+            pnl_datoslaborales.Size = new Size(446, 444);
             pnl_datoslaborales.TabIndex = 14;
             // 
             // txt_contrasena
             // 
-            txt_contrasena.Location = new Point(218, 274);
+            txt_contrasena.Location = new Point(204, 274);
             txt_contrasena.Name = "txt_contrasena";
             txt_contrasena.Size = new Size(182, 27);
             txt_contrasena.TabIndex = 27;
@@ -337,7 +340,7 @@
             // cmb_estado
             // 
             cmb_estado.FormattingEnabled = true;
-            cmb_estado.Location = new Point(218, 108);
+            cmb_estado.Location = new Point(204, 108);
             cmb_estado.Name = "cmb_estado";
             cmb_estado.Size = new Size(182, 28);
             cmb_estado.TabIndex = 26;
@@ -345,7 +348,7 @@
             // cmb_roles
             // 
             cmb_roles.FormattingEnabled = true;
-            cmb_roles.Location = new Point(218, 60);
+            cmb_roles.Location = new Point(204, 60);
             cmb_roles.Name = "cmb_roles";
             cmb_roles.Size = new Size(182, 28);
             cmb_roles.TabIndex = 25;
@@ -356,7 +359,7 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(92, 64, 51);
-            label3.Location = new Point(16, 270);
+            label3.Location = new Point(2, 270);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
             label3.Size = new Size(123, 28);
@@ -369,7 +372,7 @@
             label13.BackColor = Color.Transparent;
             label13.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.FromArgb(92, 64, 51);
-            label13.Location = new Point(16, 213);
+            label13.Location = new Point(2, 213);
             label13.Margin = new Padding(2, 0, 2, 0);
             label13.Name = "label13";
             label13.Size = new Size(99, 28);
@@ -382,7 +385,7 @@
             label14.BackColor = Color.Transparent;
             label14.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label14.ForeColor = Color.FromArgb(92, 64, 51);
-            label14.Location = new Point(16, 158);
+            label14.Location = new Point(2, 158);
             label14.Margin = new Padding(2, 0, 2, 0);
             label14.Name = "label14";
             label14.Size = new Size(192, 28);
@@ -391,14 +394,14 @@
             // 
             // txt_correoE
             // 
-            txt_correoE.Location = new Point(218, 162);
+            txt_correoE.Location = new Point(204, 162);
             txt_correoE.Name = "txt_correoE";
             txt_correoE.Size = new Size(182, 27);
             txt_correoE.TabIndex = 23;
             // 
             // txt_telefono
             // 
-            txt_telefono.Location = new Point(218, 217);
+            txt_telefono.Location = new Point(204, 217);
             txt_telefono.Name = "txt_telefono";
             txt_telefono.Size = new Size(182, 27);
             txt_telefono.TabIndex = 24;
@@ -409,7 +412,7 @@
             label15.BackColor = Color.Transparent;
             label15.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label15.ForeColor = Color.FromArgb(92, 64, 51);
-            label15.Location = new Point(16, 108);
+            label15.Location = new Point(2, 108);
             label15.Margin = new Padding(2, 0, 2, 0);
             label15.Name = "label15";
             label15.Size = new Size(80, 28);
@@ -422,7 +425,7 @@
             label16.BackColor = Color.Transparent;
             label16.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label16.ForeColor = Color.FromArgb(92, 64, 51);
-            label16.Location = new Point(16, 58);
+            label16.Location = new Point(2, 60);
             label16.Margin = new Padding(2, 0, 2, 0);
             label16.Name = "label16";
             label16.Size = new Size(195, 28);
@@ -464,6 +467,7 @@
             btn_guardar.SizeMode = PictureBoxSizeMode.StretchImage;
             btn_guardar.TabIndex = 16;
             btn_guardar.TabStop = false;
+            btn_guardar.Click += btn_guardar_Click;
             // 
             // btn_limpiar
             // 
@@ -476,6 +480,19 @@
             btn_limpiar.SizeMode = PictureBoxSizeMode.StretchImage;
             btn_limpiar.TabIndex = 17;
             btn_limpiar.TabStop = false;
+            btn_limpiar.Click += btn_limpiar_Click;
+            // 
+            // btn_agregarol
+            // 
+            btn_agregarol.Image = Properties.Resources.img_circuloagregar;
+            btn_agregarol.Location = new Point(391, 56);
+            btn_agregarol.Margin = new Padding(2);
+            btn_agregarol.Name = "btn_agregarol";
+            btn_agregarol.Size = new Size(40, 35);
+            btn_agregarol.SizeMode = PictureBoxSizeMode.StretchImage;
+            btn_agregarol.TabIndex = 18;
+            btn_agregarol.TabStop = false;
+            btn_agregarol.Click += btn_agregarol_Click;
             // 
             // frm_trabajadores_AGREGAR
             // 
@@ -493,6 +510,7 @@
             Controls.Add(pnl_superior);
             Name = "frm_trabajadores_AGREGAR";
             Text = " ";
+            Load += frm_trabajadores_AGREGAR_Load;
             pnl_superior.ResumeLayout(false);
             pnl_superior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
@@ -504,6 +522,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)btn_guardar).EndInit();
             ((System.ComponentModel.ISupportInitialize)btn_limpiar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btn_agregarol).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -546,5 +565,6 @@
         private ComboBox cmb_roles;
         private TextBox txt_correoE;
         private TextBox txt_telefono;
+        private PictureBox btn_agregarol;
     }
 }

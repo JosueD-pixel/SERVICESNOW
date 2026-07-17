@@ -158,5 +158,23 @@ namespace SERVICESNOW
             menu = new clsMenu();
             menu.AgregarAlContenedor(new frmFuncionesEquipos(), pnl_fromularios);
         }
+
+        private void pbcTrabajadores_agregar_Click(object sender, EventArgs e)
+        {
+            menu = new clsMenu();
+            menu.AgregarAlContenedor(new frm_trabajadores_AGREGAR(), pnl_fromularios);
+        }
+
+        private void pbcTrabajadores_eliminar_Click(object sender, EventArgs e)
+        {
+            menu = new clsMenu();
+            menu.AgregarAlContenedor(new frm_trabjadores_ELIMINAR(), pnl_fromularios);
+        }
+
+        private void pbcTrabajadores_modificar_Click(object sender, EventArgs e)
+        {
+            menu = new clsMenu();
+            menu.AgregarAlContenedor(new frm_trabajadores_MODIFICAR(), pnl_fromularios);
+        }
     }
 }

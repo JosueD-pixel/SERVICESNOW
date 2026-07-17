@@ -373,6 +373,16 @@ namespace SERVICESNOW.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap img_circuloagregar {
+            get {
+                object obj = ResourceManager.GetObject("img_circuloagregar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap img_consultas {
             get {
                 object obj = ResourceManager.GetObject("img_consultas", resourceCulture);
