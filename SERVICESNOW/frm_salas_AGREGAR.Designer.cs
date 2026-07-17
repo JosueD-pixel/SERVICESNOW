@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             pnlSuperior = new Panel();
             pictureBox1 = new PictureBox();
             label4 = new Label();
             pnlSalasAgregar = new Panel();
+            label11 = new Label();
+            dgvSalas = new DataGridView();
             btnLimpiar = new Button();
             btnGuardar = new Button();
             txtUbicacion = new TextBox();
@@ -57,6 +61,7 @@
             pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pnlSalasAgregar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvSalas).BeginInit();
             SuspendLayout();
             // 
             // pnlSuperior
@@ -93,6 +98,8 @@
             // pnlSalasAgregar
             // 
             pnlSalasAgregar.BackColor = Color.FromArgb(217, 199, 184);
+            pnlSalasAgregar.Controls.Add(label11);
+            pnlSalasAgregar.Controls.Add(dgvSalas);
             pnlSalasAgregar.Controls.Add(btnLimpiar);
             pnlSalasAgregar.Controls.Add(btnGuardar);
             pnlSalasAgregar.Controls.Add(txtUbicacion);
@@ -116,8 +123,54 @@
             pnlSalasAgregar.Controls.Add(label1);
             pnlSalasAgregar.Location = new Point(43, 132);
             pnlSalasAgregar.Name = "pnlSalasAgregar";
-            pnlSalasAgregar.Size = new Size(1355, 434);
+            pnlSalasAgregar.Size = new Size(1355, 700);
             pnlSalasAgregar.TabIndex = 4;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.Location = new Point(667, 25);
+            label11.Name = "label11";
+            label11.Size = new Size(192, 31);
+            label11.TabIndex = 38;
+            label11.Text = "Salas registradas";
+            // 
+            // dgvSalas
+            // 
+            dgvSalas.AllowUserToAddRows = false;
+            dgvSalas.AllowUserToDeleteRows = false;
+            dgvSalas.AllowUserToResizeColumns = false;
+            dgvSalas.AllowUserToResizeRows = false;
+            dgvSalas.BackgroundColor = Color.Silver;
+            dgvSalas.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(92, 64, 51);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(201, 123, 99);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvSalas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvSalas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(201, 123, 99);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvSalas.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvSalas.EnableHeadersVisualStyles = false;
+            dgvSalas.Location = new Point(667, 86);
+            dgvSalas.MultiSelect = false;
+            dgvSalas.Name = "dgvSalas";
+            dgvSalas.ReadOnly = true;
+            dgvSalas.RowHeadersVisible = false;
+            dgvSalas.RowHeadersWidth = 51;
+            dgvSalas.RowTemplate.Height = 32;
+            dgvSalas.Size = new Size(656, 348);
+            dgvSalas.TabIndex = 37;
             // 
             // btnLimpiar
             // 
@@ -126,7 +179,7 @@
             btnLimpiar.BackgroundImageLayout = ImageLayout.Zoom;
             btnLimpiar.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnLimpiar.ForeColor = Color.White;
-            btnLimpiar.Location = new Point(928, 351);
+            btnLimpiar.Location = new Point(926, 608);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(192, 68);
             btnLimpiar.TabIndex = 35;
@@ -139,7 +192,7 @@
             btnGuardar.BackgroundImageLayout = ImageLayout.Zoom;
             btnGuardar.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnGuardar.ForeColor = Color.WhiteSmoke;
-            btnGuardar.Location = new Point(1146, 351);
+            btnGuardar.Location = new Point(1131, 608);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(192, 68);
             btnGuardar.TabIndex = 34;
@@ -148,7 +201,7 @@
             // txtUbicacion
             // 
             txtUbicacion.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtUbicacion.Location = new Point(339, 265);
+            txtUbicacion.Location = new Point(16, 581);
             txtUbicacion.Name = "txtUbicacion";
             txtUbicacion.ReadOnly = true;
             txtUbicacion.Size = new Size(271, 34);
@@ -169,7 +222,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(339, 150);
+            label8.Location = new Point(16, 466);
             label8.Name = "label8";
             label8.Size = new Size(164, 28);
             label8.TabIndex = 30;
@@ -179,7 +232,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(339, 234);
+            label7.Location = new Point(16, 550);
             label7.Name = "label7";
             label7.Size = new Size(99, 28);
             label7.TabIndex = 21;
@@ -189,7 +242,7 @@
             // 
             cmbEquipamiento.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmbEquipamiento.FormattingEnabled = true;
-            cmbEquipamiento.Location = new Point(630, 181);
+            cmbEquipamiento.Location = new Point(333, 181);
             cmbEquipamiento.Name = "cmbEquipamiento";
             cmbEquipamiento.Size = new Size(271, 36);
             cmbEquipamiento.TabIndex = 29;
@@ -197,7 +250,7 @@
             // txtCantSillas
             // 
             txtCantSillas.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtCantSillas.Location = new Point(339, 181);
+            txtCantSillas.Location = new Point(16, 497);
             txtCantSillas.Name = "txtCantSillas";
             txtCantSillas.ReadOnly = true;
             txtCantSillas.Size = new Size(113, 34);
@@ -208,7 +261,7 @@
             // 
             txtEquipamiento.AutoSize = true;
             txtEquipamiento.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtEquipamiento.Location = new Point(630, 150);
+            txtEquipamiento.Location = new Point(333, 150);
             txtEquipamiento.Name = "txtEquipamiento";
             txtEquipamiento.Size = new Size(134, 28);
             txtEquipamiento.TabIndex = 28;
@@ -218,7 +271,7 @@
             // 
             cmbTipoSala.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmbTipoSala.FormattingEnabled = true;
-            cmbTipoSala.Location = new Point(630, 97);
+            cmbTipoSala.Location = new Point(333, 97);
             cmbTipoSala.Name = "cmbTipoSala";
             cmbTipoSala.Size = new Size(271, 36);
             cmbTipoSala.TabIndex = 27;
@@ -227,7 +280,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(339, 66);
+            label9.Location = new Point(16, 386);
             label9.Name = "label9";
             label9.Size = new Size(176, 28);
             label9.TabIndex = 25;
@@ -237,7 +290,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(630, 66);
+            label10.Location = new Point(333, 66);
             label10.Name = "label10";
             label10.Size = new Size(116, 28);
             label10.TabIndex = 26;
@@ -246,7 +299,7 @@
             // txtCantMesas
             // 
             txtCantMesas.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtCantMesas.Location = new Point(339, 97);
+            txtCantMesas.Location = new Point(16, 417);
             txtCantMesas.Name = "txtCantMesas";
             txtCantMesas.ReadOnly = true;
             txtCantMesas.Size = new Size(113, 34);
@@ -256,7 +309,7 @@
             // txtCapacidadSala
             // 
             txtCapacidadSala.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtCapacidadSala.Location = new Point(16, 371);
+            txtCapacidadSala.Location = new Point(16, 335);
             txtCapacidadSala.Name = "txtCapacidadSala";
             txtCapacidadSala.ReadOnly = true;
             txtCapacidadSala.Size = new Size(113, 34);
@@ -267,7 +320,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(16, 340);
+            label6.Location = new Point(16, 304);
             label6.Name = "label6";
             label6.Size = new Size(104, 28);
             label6.TabIndex = 18;
@@ -276,7 +329,7 @@
             // txtDescripcionSala
             // 
             txtDescripcionSala.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtDescripcionSala.Location = new Point(16, 265);
+            txtDescripcionSala.Location = new Point(16, 242);
             txtDescripcionSala.Multiline = true;
             txtDescripcionSala.Name = "txtDescripcionSala";
             txtDescripcionSala.ReadOnly = true;
@@ -288,7 +341,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(16, 234);
+            label3.Location = new Point(16, 211);
             label3.Name = "label3";
             label3.Size = new Size(199, 28);
             label3.TabIndex = 16;
@@ -297,7 +350,7 @@
             // txtNombreSala
             // 
             txtNombreSala.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombreSala.Location = new Point(16, 181);
+            txtNombreSala.Location = new Point(16, 165);
             txtNombreSala.Name = "txtNombreSala";
             txtNombreSala.ReadOnly = true;
             txtNombreSala.Size = new Size(271, 34);
@@ -308,7 +361,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(16, 150);
+            label2.Location = new Point(16, 134);
             label2.Name = "label2";
             label2.Size = new Size(170, 28);
             label2.TabIndex = 14;
@@ -349,7 +402,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 251, 245);
-            ClientSize = new Size(1432, 592);
+            ClientSize = new Size(1432, 853);
             Controls.Add(pnlSalasAgregar);
             Controls.Add(pnlSuperior);
             Controls.Add(label5);
@@ -360,6 +413,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             pnlSalasAgregar.ResumeLayout(false);
             pnlSalasAgregar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvSalas).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -392,5 +446,7 @@
         private TextBox txtUbicacion;
         private Button btnGuardar;
         private Button btnLimpiar;
+        private Label label11;
+        private DataGridView dgvSalas;
     }
 }

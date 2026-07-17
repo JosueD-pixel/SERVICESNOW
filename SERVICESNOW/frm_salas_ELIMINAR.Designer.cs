@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             pnlSuperior = new Panel();
             pictureBox1 = new PictureBox();
             label4 = new Label();
@@ -80,20 +80,21 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(217, 199, 184);
+            panel1.Controls.Add(label8);
             panel1.Controls.Add(label13);
             panel1.Controls.Add(btnEliminar);
             panel1.Controls.Add(txtBuscarSala);
             panel1.Controls.Add(dgvSalas);
             panel1.Location = new Point(23, 131);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1386, 449);
+            panel1.Size = new Size(1386, 638);
             panel1.TabIndex = 5;
             // 
             // label13
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.Location = new Point(193, 4);
+            label13.Location = new Point(193, 11);
             label13.Name = "label13";
             label13.Size = new Size(192, 31);
             label13.TabIndex = 40;
@@ -106,7 +107,7 @@
             btnEliminar.BackgroundImageLayout = ImageLayout.Zoom;
             btnEliminar.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(1005, 376);
+            btnEliminar.Location = new Point(1005, 558);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(192, 68);
             btnEliminar.TabIndex = 38;
@@ -115,7 +116,7 @@
             // txtBuscarSala
             // 
             txtBuscarSala.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtBuscarSala.Location = new Point(948, 3);
+            txtBuscarSala.Location = new Point(948, 76);
             txtBuscarSala.Name = "txtBuscarSala";
             txtBuscarSala.Size = new Size(249, 34);
             txtBuscarSala.TabIndex = 40;
@@ -128,32 +129,32 @@
             dgvSalas.AllowUserToResizeRows = false;
             dgvSalas.BackgroundColor = Color.Silver;
             dgvSalas.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(92, 64, 51);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(201, 123, 99);
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvSalas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(92, 64, 51);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(201, 123, 99);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvSalas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvSalas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Window;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(201, 123, 99);
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dgvSalas.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(201, 123, 99);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvSalas.DefaultCellStyle = dataGridViewCellStyle2;
             dgvSalas.EnableHeadersVisualStyles = false;
-            dgvSalas.Location = new Point(193, 43);
+            dgvSalas.Location = new Point(193, 116);
             dgvSalas.MultiSelect = false;
             dgvSalas.Name = "dgvSalas";
             dgvSalas.ReadOnly = true;
             dgvSalas.RowHeadersVisible = false;
             dgvSalas.RowHeadersWidth = 51;
             dgvSalas.RowTemplate.Height = 32;
-            dgvSalas.Size = new Size(1004, 327);
+            dgvSalas.Size = new Size(1004, 394);
             dgvSalas.TabIndex = 37;
             // 
             // label5
@@ -170,7 +171,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(1054, 100);
+            label8.Location = new Point(1031, 45);
             label8.Name = "label8";
             label8.Size = new Size(166, 28);
             label8.TabIndex = 39;
@@ -180,8 +181,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1432, 592);
-            Controls.Add(label8);
+            ClientSize = new Size(1432, 853);
             Controls.Add(label5);
             Controls.Add(panel1);
             Controls.Add(pnlSuperior);

@@ -400,9 +400,9 @@
             // pnl_fromularios
             // 
             pnl_fromularios.BackColor = Color.White;
-            pnl_fromularios.Location = new Point(256, 107);
+            pnl_fromularios.Location = new Point(253, 107);
             pnl_fromularios.Name = "pnl_fromularios";
-            pnl_fromularios.Size = new Size(1450, 639);
+            pnl_fromularios.Size = new Size(1464, 900);
             pnl_fromularios.TabIndex = 4;
             // 
             // frm_administrador
