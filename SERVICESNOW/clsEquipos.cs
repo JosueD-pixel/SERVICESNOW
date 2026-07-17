@@ -39,7 +39,7 @@ namespace SERVICESNOW
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "select id_equipo AS Clave, nombre_equipamiento AS Equipo, sistema_audio AS Audio, pizarron AS Pizarron, pantalla AS Pantalla, proyector AS Proyector, red AS Red from tbl_equipo;";
+                    string sql = "select id_equipo AS Clave, nombre AS Equipo, sistema_audio AS Audio, pizarron AS Pizarron, pantalla AS Pantalla, proyector AS Proyector, red AS Red from tbl_equipos;";
                     using (consulta = new MySqlDataAdapter(sql, conexion))
                     {
                         consulta.Fill(tabla);
@@ -61,7 +61,7 @@ namespace SERVICESNOW
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "select id_equipo AS Clave, nombre_equipamiento AS Equipo, sistema_audio AS Audio, pizarron AS Pizarron, pantalla AS Pantalla, proyector AS Proyector, red AS Red from tbl_equipo WHERE id_equipo LIKE @id_equipo;";
+                    string sql = "select id_equipo AS Clave, nombre_equipamiento AS Equipo, sistema_audio AS Audio, pizarron AS Pizarron, pantalla AS Pantalla, proyector AS Proyector, red AS Red from tbl_equipos WHERE id_equipo LIKE @id_equipo;";
                     using (var consultar = new MySqlCommand(sql, conexion))
                     {
                         consultar.Parameters.AddWithValue("@id_equipo", "%" + idEquipo + "%");
@@ -91,13 +91,13 @@ namespace SERVICESNOW
                     string sql = @"
                 SELECT
                     id_equipo AS Clave,
-                    nombre_equipamiento AS Equipo,
+                    nombre AS Equipo,
                     sistema_audio AS Audio,
                     pizarron AS Pizarron,
                     pantalla AS Pantalla,
                     proyector AS Proyector,
                     red AS Red
-                FROM tbl_equipo;";
+                FROM tbl_equipos;";
 
                     using (var comando = new MySqlCommand(sql, conexion))
                     using (var adaptador = new MySqlDataAdapter(comando))
@@ -144,7 +144,7 @@ namespace SERVICESNOW
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "DELETE FROM tbl_equipo WHERE id_equipo = @id_equipo;";
+                    string sql = "DELETE FROM tbl_equipos WHERE id_equipo = @id_equipo;";
                     using (comando = new MySqlCommand(sql, conexion))
                     {
                         comando.Parameters.AddWithValue("@id_equipo", idEquipo);
@@ -179,7 +179,7 @@ namespace SERVICESNOW
                     switch (TipoOperacion)
                     {
                         case 0://insertarNEW
-                            string sqlN = "INSERT INTO tbl_equipo(nombre_equipamiento, sistema_audio, pizarron, pantalla, proyector, red) VALUES (@nombre_equipamiento, @sistema_audio, @pizarron, @pantalla, @proyector, @red);";
+                            string sqlN = "INSERT INTO tbl_equipos(nombre, sistema_audio, pizarron, pantalla, proyector, red) VALUES (@nombre, @sistema_audio, @pizarron, @pantalla, @proyector, @red);";
                             using (comando = new MySqlCommand(sqlN, conexion))
                             {
                                 comando.Parameters.AddWithValue("nombre_equipamiento", nombreEquipo);

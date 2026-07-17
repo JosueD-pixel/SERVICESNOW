@@ -34,11 +34,11 @@ namespace SERVICESNOW
                 using (var conexion = conexionBD.AbrirConexion())
                 {
                     string sql = "SELECT id_rol FROM tbl_trabajadores " +
-                                 "WHERE clave_trabajador = @clave_trabajador AND contrasena = @contrasena;";
+                                 "WHERE clave_trabajador = @clave_trabajador AND password = @password;";
                     using (var consulta = new MySqlCommand(sql, conexion))
                     {
                         consulta.Parameters.AddWithValue("@clave_trabajador", matricula);
-                        consulta.Parameters.AddWithValue("@contrasena", password);
+                        consulta.Parameters.AddWithValue("@password", password);
 
                         using (var resultado = consulta.ExecuteReader())
                         {

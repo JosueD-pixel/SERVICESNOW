@@ -276,6 +276,7 @@
             pbcTrabajadores_modificar.SizeMode = PictureBoxSizeMode.StretchImage;
             pbcTrabajadores_modificar.TabIndex = 5;
             pbcTrabajadores_modificar.TabStop = false;
+            pbcTrabajadores_modificar.Click += pbcTrabajadores_modificar_Click;
             // 
             // pbcTrabajadores_eliminar
             // 
@@ -286,6 +287,7 @@
             pbcTrabajadores_eliminar.SizeMode = PictureBoxSizeMode.StretchImage;
             pbcTrabajadores_eliminar.TabIndex = 4;
             pbcTrabajadores_eliminar.TabStop = false;
+            pbcTrabajadores_eliminar.Click += pbcTrabajadores_eliminar_Click;
             // 
             // pbcTrabajadores_agregar
             // 
@@ -296,6 +298,7 @@
             pbcTrabajadores_agregar.SizeMode = PictureBoxSizeMode.StretchImage;
             pbcTrabajadores_agregar.TabIndex = 3;
             pbcTrabajadores_agregar.TabStop = false;
+            pbcTrabajadores_agregar.Click += pbcTrabajadores_agregar_Click;
             // 
             // pbc_trabajadores
             // 

@@ -32,14 +32,24 @@
             pictureBox4 = new PictureBox();
             label5 = new Label();
             pnl_datospersonales = new Panel();
+            txt_contrasena = new TextBox();
+            label3 = new Label();
             txt_calle = new TextBox();
+            cmb_estado = new ComboBox();
+            label13 = new Label();
             txt_colonia = new TextBox();
+            txt_telefono = new TextBox();
+            label14 = new Label();
+            cmb_roles = new ComboBox();
+            txt_correoE = new TextBox();
             txt_codigopostal = new TextBox();
             txt_APmaterno = new TextBox();
             txt_nombre = new TextBox();
+            label15 = new Label();
             txt_APpaterno = new TextBox();
             txt_clave = new TextBox();
             label12 = new Label();
+            label16 = new Label();
             label11 = new Label();
             label10 = new Label();
             label9 = new Label();
@@ -47,27 +57,17 @@
             label7 = new Label();
             label6 = new Label();
             label2 = new Label();
-            txt_contrasena = new TextBox();
-            cmb_estado = new ComboBox();
-            cmb_roles = new ComboBox();
-            label3 = new Label();
-            label13 = new Label();
-            label14 = new Label();
-            txt_correoE = new TextBox();
-            txt_telefono = new TextBox();
-            label15 = new Label();
-            label16 = new Label();
             pnl_tabla = new Panel();
-            dataGridView1 = new DataGridView();
-            txt_buscador = new TextBox();
-            label1 = new Label();
             btn_modificar = new PictureBox();
+            label1 = new Label();
+            txt_buscador = new TextBox();
+            dgv_Trabajadores = new DataGridView();
             pnl_superior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             pnl_datospersonales.SuspendLayout();
             pnl_tabla.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btn_modificar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Trabajadores).BeginInit();
             SuspendLayout();
             // 
             // pnl_superior
@@ -137,6 +137,26 @@
             pnl_datospersonales.Size = new Size(423, 513);
             pnl_datospersonales.TabIndex = 12;
             // 
+            // txt_contrasena
+            // 
+            txt_contrasena.Location = new Point(221, 474);
+            txt_contrasena.Name = "txt_contrasena";
+            txt_contrasena.Size = new Size(182, 27);
+            txt_contrasena.TabIndex = 37;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.FromArgb(92, 64, 51);
+            label3.Location = new Point(19, 470);
+            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(123, 28);
+            label3.TabIndex = 32;
+            label3.Text = "Contraseña:";
+            // 
             // txt_calle
             // 
             txt_calle.Location = new Point(221, 278);
@@ -144,12 +164,68 @@
             txt_calle.Size = new Size(182, 27);
             txt_calle.TabIndex = 27;
             // 
+            // cmb_estado
+            // 
+            cmb_estado.FormattingEnabled = true;
+            cmb_estado.Location = new Point(221, 365);
+            cmb_estado.Name = "cmb_estado";
+            cmb_estado.Size = new Size(182, 28);
+            cmb_estado.TabIndex = 36;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.BackColor = Color.Transparent;
+            label13.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.ForeColor = Color.FromArgb(92, 64, 51);
+            label13.Location = new Point(19, 428);
+            label13.Margin = new Padding(2, 0, 2, 0);
+            label13.Name = "label13";
+            label13.Size = new Size(99, 28);
+            label13.TabIndex = 31;
+            label13.Text = "Telefono:";
+            // 
             // txt_colonia
             // 
             txt_colonia.Location = new Point(221, 238);
             txt_colonia.Name = "txt_colonia";
             txt_colonia.Size = new Size(182, 27);
             txt_colonia.TabIndex = 26;
+            // 
+            // txt_telefono
+            // 
+            txt_telefono.Location = new Point(221, 432);
+            txt_telefono.Name = "txt_telefono";
+            txt_telefono.Size = new Size(182, 27);
+            txt_telefono.TabIndex = 34;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
+            label14.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.ForeColor = Color.FromArgb(92, 64, 51);
+            label14.Location = new Point(19, 395);
+            label14.Margin = new Padding(2, 0, 2, 0);
+            label14.Name = "label14";
+            label14.Size = new Size(192, 28);
+            label14.TabIndex = 30;
+            label14.Text = "Correo electronico:";
+            // 
+            // cmb_roles
+            // 
+            cmb_roles.FormattingEnabled = true;
+            cmb_roles.Location = new Point(221, 321);
+            cmb_roles.Name = "cmb_roles";
+            cmb_roles.Size = new Size(182, 28);
+            cmb_roles.TabIndex = 35;
+            // 
+            // txt_correoE
+            // 
+            txt_correoE.Location = new Point(221, 399);
+            txt_correoE.Name = "txt_correoE";
+            txt_correoE.Size = new Size(182, 27);
+            txt_correoE.TabIndex = 33;
             // 
             // txt_codigopostal
             // 
@@ -171,6 +247,19 @@
             txt_nombre.Name = "txt_nombre";
             txt_nombre.Size = new Size(182, 27);
             txt_nombre.TabIndex = 21;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.BackColor = Color.Transparent;
+            label15.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label15.ForeColor = Color.FromArgb(92, 64, 51);
+            label15.Location = new Point(19, 365);
+            label15.Margin = new Padding(2, 0, 2, 0);
+            label15.Name = "label15";
+            label15.Size = new Size(80, 28);
+            label15.TabIndex = 29;
+            label15.Text = "Estado:";
             // 
             // txt_APpaterno
             // 
@@ -198,6 +287,19 @@
             label12.Size = new Size(147, 28);
             label12.TabIndex = 18;
             label12.Text = "Codigo postal:";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.BackColor = Color.Transparent;
+            label16.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label16.ForeColor = Color.FromArgb(92, 64, 51);
+            label16.Location = new Point(19, 319);
+            label16.Margin = new Padding(2, 0, 2, 0);
+            label16.Name = "label16";
+            label16.Size = new Size(195, 28);
+            label16.TabIndex = 28;
+            label16.Text = "Rol del trabajador: ";
             // 
             // label11
             // 
@@ -290,146 +392,17 @@
             label2.TabIndex = 12;
             label2.Text = "Datos personales";
             // 
-            // txt_contrasena
-            // 
-            txt_contrasena.Location = new Point(221, 474);
-            txt_contrasena.Name = "txt_contrasena";
-            txt_contrasena.Size = new Size(182, 27);
-            txt_contrasena.TabIndex = 37;
-            // 
-            // cmb_estado
-            // 
-            cmb_estado.FormattingEnabled = true;
-            cmb_estado.Location = new Point(221, 365);
-            cmb_estado.Name = "cmb_estado";
-            cmb_estado.Size = new Size(182, 28);
-            cmb_estado.TabIndex = 36;
-            // 
-            // cmb_roles
-            // 
-            cmb_roles.FormattingEnabled = true;
-            cmb_roles.Location = new Point(221, 321);
-            cmb_roles.Name = "cmb_roles";
-            cmb_roles.Size = new Size(182, 28);
-            cmb_roles.TabIndex = 35;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(92, 64, 51);
-            label3.Location = new Point(19, 470);
-            label3.Margin = new Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(123, 28);
-            label3.TabIndex = 32;
-            label3.Text = "Contraseña:";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.BackColor = Color.Transparent;
-            label13.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.ForeColor = Color.FromArgb(92, 64, 51);
-            label13.Location = new Point(19, 428);
-            label13.Margin = new Padding(2, 0, 2, 0);
-            label13.Name = "label13";
-            label13.Size = new Size(99, 28);
-            label13.TabIndex = 31;
-            label13.Text = "Telefono:";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.BackColor = Color.Transparent;
-            label14.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.ForeColor = Color.FromArgb(92, 64, 51);
-            label14.Location = new Point(19, 395);
-            label14.Margin = new Padding(2, 0, 2, 0);
-            label14.Name = "label14";
-            label14.Size = new Size(192, 28);
-            label14.TabIndex = 30;
-            label14.Text = "Correo electronico:";
-            // 
-            // txt_correoE
-            // 
-            txt_correoE.Location = new Point(221, 399);
-            txt_correoE.Name = "txt_correoE";
-            txt_correoE.Size = new Size(182, 27);
-            txt_correoE.TabIndex = 33;
-            // 
-            // txt_telefono
-            // 
-            txt_telefono.Location = new Point(221, 432);
-            txt_telefono.Name = "txt_telefono";
-            txt_telefono.Size = new Size(182, 27);
-            txt_telefono.TabIndex = 34;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.BackColor = Color.Transparent;
-            label15.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label15.ForeColor = Color.FromArgb(92, 64, 51);
-            label15.Location = new Point(19, 365);
-            label15.Margin = new Padding(2, 0, 2, 0);
-            label15.Name = "label15";
-            label15.Size = new Size(80, 28);
-            label15.TabIndex = 29;
-            label15.Text = "Estado:";
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.BackColor = Color.Transparent;
-            label16.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.ForeColor = Color.FromArgb(92, 64, 51);
-            label16.Location = new Point(19, 319);
-            label16.Margin = new Padding(2, 0, 2, 0);
-            label16.Name = "label16";
-            label16.Size = new Size(195, 28);
-            label16.TabIndex = 28;
-            label16.Text = "Rol del trabajador: ";
-            // 
             // pnl_tabla
             // 
             pnl_tabla.BackColor = Color.FromArgb(246, 240, 232);
             pnl_tabla.Controls.Add(btn_modificar);
             pnl_tabla.Controls.Add(label1);
             pnl_tabla.Controls.Add(txt_buscador);
-            pnl_tabla.Controls.Add(dataGridView1);
+            pnl_tabla.Controls.Add(dgv_Trabajadores);
             pnl_tabla.Location = new Point(461, 66);
             pnl_tabla.Name = "pnl_tabla";
             pnl_tabla.Size = new Size(959, 513);
             pnl_tabla.TabIndex = 13;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(21, 64);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(912, 362);
-            dataGridView1.TabIndex = 0;
-            // 
-            // txt_buscador
-            // 
-            txt_buscador.Location = new Point(751, 31);
-            txt_buscador.Name = "txt_buscador";
-            txt_buscador.Size = new Size(182, 27);
-            txt_buscador.TabIndex = 20;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(92, 64, 51);
-            label1.Location = new Point(753, 4);
-            label1.Name = "label1";
-            label1.Size = new Size(183, 28);
-            label1.TabIndex = 21;
-            label1.Text = "Buscar trabajadores";
             // 
             // btn_modificar
             // 
@@ -442,6 +415,36 @@
             btn_modificar.SizeMode = PictureBoxSizeMode.StretchImage;
             btn_modificar.TabIndex = 15;
             btn_modificar.TabStop = false;
+            btn_modificar.Click += btn_modificar_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(92, 64, 51);
+            label1.Location = new Point(753, 4);
+            label1.Name = "label1";
+            label1.Size = new Size(183, 28);
+            label1.TabIndex = 21;
+            label1.Text = "Buscar trabajadores";
+            // 
+            // txt_buscador
+            // 
+            txt_buscador.Location = new Point(751, 31);
+            txt_buscador.Name = "txt_buscador";
+            txt_buscador.Size = new Size(182, 27);
+            txt_buscador.TabIndex = 20;
+            txt_buscador.TextChanged += txt_buscador_TextChanged;
+            // 
+            // dgv_Trabajadores
+            // 
+            dgv_Trabajadores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_Trabajadores.Location = new Point(21, 64);
+            dgv_Trabajadores.Name = "dgv_Trabajadores";
+            dgv_Trabajadores.RowHeadersWidth = 51;
+            dgv_Trabajadores.Size = new Size(912, 362);
+            dgv_Trabajadores.TabIndex = 0;
+            dgv_Trabajadores.CellClick += dgv_Trabajadores_CellClick;
             // 
             // frm_trabajadores_MODIFICAR
             // 
@@ -454,6 +457,7 @@
             Controls.Add(pnl_superior);
             Name = "frm_trabajadores_MODIFICAR";
             Text = "frm_trabajadores_MODIFICAR";
+            Load += frm_trabajadores_MODIFICAR_Load;
             pnl_superior.ResumeLayout(false);
             pnl_superior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
@@ -461,8 +465,8 @@
             pnl_datospersonales.PerformLayout();
             pnl_tabla.ResumeLayout(false);
             pnl_tabla.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)btn_modificar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Trabajadores).EndInit();
             ResumeLayout(false);
         }
 
@@ -501,6 +505,6 @@
         private PictureBox btn_modificar;
         private Label label1;
         private TextBox txt_buscador;
-        private DataGridView dataGridView1;
+        private DataGridView dgv_Trabajadores;
     }
 }
