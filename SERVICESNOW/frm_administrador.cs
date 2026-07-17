@@ -137,17 +137,20 @@ namespace SERVICESNOW
 
         private void pbc_Salonesagregar_Click(object sender, EventArgs e)
         {
-
+            menu = new clsMenu();
+            menu.AgregarAlContenedor(new frm_salas_AGREGAR(), pnl_fromularios);
         }
 
         private void pbc_Saloneseliminar_Click(object sender, EventArgs e)
         {
-
+            menu = new clsMenu();
+            menu.AgregarAlContenedor(new frm_salas_ELIMINAR(), pnl_fromularios);
         }
 
         private void pbcSalones_modificar_Click(object sender, EventArgs e)
         {
-
+            menu = new clsMenu();
+            menu.AgregarAlContenedor(new frm_salas_MODIFICAR(), pnl_fromularios);
         }
 
         private void pbc_equipos_Click(object sender, EventArgs e)

@@ -223,6 +223,16 @@ namespace SERVICESNOW.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap equipos {
+            get {
+                object obj = ResourceManager.GetObject("equipos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fondo_login {
             get {
                 object obj = ResourceManager.GetObject("fondo_login", resourceCulture);
@@ -606,6 +616,16 @@ namespace SERVICESNOW.Properties {
         internal static System.Drawing.Bitmap lg_services {
             get {
                 object obj = ResourceManager.GetObject("lg_services", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap salas {
+            get {
+                object obj = ResourceManager.GetObject("salas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
